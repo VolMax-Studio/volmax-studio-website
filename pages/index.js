@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-2xl font-bold text-white">
-              <span className="text-cyan-400">Vol</span>Max Studio
+              <span className="text-cyan-400">Vol</span>Max Studio Lab
             </div>
             <div className="hidden md:flex space-x-8 text-white">
               <a href="#home" className="hover:text-cyan-400 transition-colors">Home</a>
@@ -117,7 +117,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-purple-900/30 to-cyan-900/30 rounded-2xl p-8 backdrop-blur border border-white/10 mb-12">
             <h3 className="text-3xl font-bold text-white mb-6 text-center">Our Mission</h3>
             <p className="text-lg text-gray-300 text-center max-w-4xl mx-auto">
-              VolMax Studio is developing ShadowRock - an advanced AI system that will power 
+              VolMax Studio Lab is developing ShadowRock - an advanced AI system that will power 
               a network of specialized AR applications across every industry vertical. 
               By 2027, we aim to establish the world's most comprehensive AR ecosystem.
             </p>
@@ -154,7 +154,7 @@ export default function Home() {
           </p>
           
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 rounded-2xl p-8 backdrop-blur border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-6">VolMax Studio D.O.O.</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">VolMax Studio Lab D.O.O.</h3>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div>
                 <p className="text-gray-300 mb-2">
@@ -171,8 +171,12 @@ export default function Home() {
                 <p className="text-gray-300 mb-2">
                   <span className="text-purple-400 font-semibold">Website:</span> volmax-studio.rs
                 </p>
+                 <p className="text-gray-300 mb-2">
+                  <span className="text-purple-400 font-semibold">Github:</span> https://github.com/VolMax-Studio/
+                </p>
+
                 <p className="text-gray-300 mb-2">
-                  <span className="text-purple-400 font-semibold">Status:</span> D.O.O. Registration In Progress
+                  <span className="text-purple-400 font-semibold">Status:</span> VolMax Studio Lab D.O.O. Registration In Progress
                 </p>
                 <p className="text-gray-300">
                   <span className="text-purple-400 font-semibold">Focus:</span> AR/AI Innovation
