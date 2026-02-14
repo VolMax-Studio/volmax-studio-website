@@ -336,7 +336,10 @@ export default function Home() {
                 <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">{t.products.smartGrid.tag3}</span>
               </div>
               <div className="text-blue-400 font-semibold">{t.products.smartGrid.status}</div>
-                {/* P2 Smart Agriculture - NOVA KARTICA */}
+               
+            </div>
+            </div>
+                 {/* P2 Smart Agriculture - NOVA KARTICA */}
             <div className="bg-gradient-to-br from-green-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-green-400/50 transition-all group">
               
               {/* Slika */}
@@ -361,8 +364,6 @@ export default function Home() {
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.p2Agri.tag3}</span>
               </div>
               <div className="text-green-400 font-semibold">{t.products.p2Agri.status}</div>
-            </div>
-            </div>
           </div>
         </div>
       </section>
