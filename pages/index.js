@@ -293,16 +293,24 @@ export default function Home() {
               <div className="text-teal-400 font-semibold">{t.products.energyMonitor.status}</div>
             </div>
 
-            {/* SmartGrid Hub */}
-            <div className="bg-gradient-to-br from-blue-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-blue-400/50 transition-all">
-              <div className="h-48 bg-gradient-to-br from-blue-600 to-teal-600 rounded-xl mb-6 flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">{t.products.smartGrid.title}</span>
+           {/* SmartGrid Hub */}
+            <div className="bg-gradient-to-br from-blue-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-blue-400/50 transition-all group">
+              
+              {/* --- NOVA SLIKA ZA GRID --- */}
+              <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-500/20">
+                <Image 
+                  src="/grid.png"   // <-- Obavezno ubaci grid.png u public folder
+                  alt="SmartGrid Hub"
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                {/* Plavi sjaj preko slike */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
               </div>
+              {/* -------------------------- */}
+
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.smartGrid.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.smartGrid.tagline}</p>
-              <p className="text-gray-400 mb-6">
-                {t.products.smartGrid.description}
-              </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.smartGrid.tag1}</span>
                 <span className="px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-sm">{t.products.smartGrid.tag2}</span>
