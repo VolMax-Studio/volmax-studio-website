@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
+import Image from 'next/image';
 export default function Home() {
   const [lang, setLang] = useState('sr');
 
@@ -254,7 +254,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products Section */}
+     {/* Products Section */}
       <section id="products" className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -264,11 +264,22 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
-            {/* EnergyMonitor */}
-            <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-teal-400/50 transition-all">
-              <div className="h-48 bg-gradient-to-br from-teal-600 to-blue-600 rounded-xl mb-6 flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">{t.products.energyMonitor.title}</span>
+            
+            {/* EnergyMonitor -  */}
+            <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-teal-400/50 transition-all group">
+              
+              {/* Slika Uređaja */}
+              <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-teal-500/20">
+                <Image 
+                  src="/device.png" 
+                  alt="EnergyMonitor Device"
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                {/* Blagi sjaj preko slike */}
+                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
               </div>
+
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.energyMonitor.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.energyMonitor.tagline}</p>
               <p className="text-gray-400 mb-6">
