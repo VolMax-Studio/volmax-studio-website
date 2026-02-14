@@ -41,7 +41,16 @@ export default function Home() {
           tag2: 'Grid Optimizacija',
           tag3: 'Skalabilnost',
           status: 'Status: Koncept'
-        }
+        },
+        p2Agri: {
+            title: 'P2: Smart Agriculture',
+            tagline: 'Autonomna Kontrola Navodnjavanja',
+            description: 'Primena P4 čipa za preciznu kontrolu pumpi i sistema za navodnjavanje. Radi na solarne panele, optimizuje pritisak i štedi vodu na udaljenim lokacijama.',
+            tag1: 'Solar Ready',
+            tag2: 'Pump Control',
+            tag3: 'Ušteda Vode',
+            status: 'Status: Patent Pending'
+          }
       },
       about: {
         title: 'O Projektu',
@@ -125,7 +134,16 @@ export default function Home() {
           tag2: 'Grid Optimization',
           tag3: 'Scalability',
           status: 'Status: Concept'
-        }
+        },
+        p2Agri: {
+            title: 'P2: Smart Agriculture',
+            tagline: 'Autonomous Irrigation Control',
+            description: 'Application of P4 chip for precision control of pumps and irrigation systems. Solar-ready, optimizes pressure, and saves water in remote locations.',
+            tag1: 'Solar Ready',
+            tag2: 'Pump Control',
+            tag3: 'Water Saving',
+            status: 'Status: Patent Pending'
+          }
       },
       about: {
         title: 'About the Project',
@@ -263,7 +281,7 @@ export default function Home() {
               {t.products.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* EnergyMonitor -  */}
             <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-teal-400/50 transition-all group">
@@ -308,6 +326,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
               </div>
               {/* -------------------------- */}
+               
 
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.smartGrid.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.smartGrid.tagline}</p>
@@ -317,6 +336,32 @@ export default function Home() {
                 <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">{t.products.smartGrid.tag3}</span>
               </div>
               <div className="text-blue-400 font-semibold">{t.products.smartGrid.status}</div>
+                {/* P2 Smart Agriculture - NOVA KARTICA */}
+            <div className="bg-gradient-to-br from-green-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-green-400/50 transition-all group">
+              
+              {/* Slika */}
+              <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-green-500/20">
+                <Image 
+                  src="/agri.png"   // <-- Trebaće ti ova slika
+                  alt="P2 Smart Agriculture"
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 to-transparent"></div>
+              </div>
+
+              <h3 className="text-3xl font-bold text-white mb-4">{t.products.p2Agri.title}</h3>
+              <p className="text-gray-300 mb-4">{t.products.p2Agri.tagline}</p>
+              <p className="text-gray-400 mb-6">
+                {t.products.p2Agri.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">{t.products.p2Agri.tag1}</span>
+                <span className="px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-sm">{t.products.p2Agri.tag2}</span>
+                <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.p2Agri.tag3}</span>
+              </div>
+              <div className="text-green-400 font-semibold">{t.products.p2Agri.status}</div>
+            </div>
             </div>
           </div>
         </div>
