@@ -63,7 +63,7 @@ export default function Home() {
         missionText: 'VolMax Studio Lab ima za cilj revolucionisanje upravljanja energijom kombinacijom IoT i AI tehnologija. Počinjemo sa NILM monitoringom i širimo se ka smart grid integraciji do 2027. godine.',
         phase1Title: 'Faza 1: Prototip',
         phase1Time: '2025-2026',
-        phase1Desc: 'Razvoj i testiranje EnergyMonitor sa 500 beta jedinica.',
+        phase1Desc: 'Razvoj i testiranje EnergyMonitor .',
         phase2Title: 'Faza 2: Lansiranje',
         phase2Time: '2026-2027',
         phase2Desc: 'Proizvodnja 2,000 jedinica, ekspanzija na EU tržište.',
@@ -82,7 +82,7 @@ export default function Home() {
         github: 'GitHub',
         status: 'Status',
         focus: 'Fokus',
-        statusValue: 'Registracija u toku',
+        statusValue: 'Registracija Patent 1, 2, 3, 4 i 4+',
         focusValue: 'IoT Energetska Rešenja'
       },
       footer: {
@@ -166,7 +166,7 @@ export default function Home() {
         github: 'GitHub',
         status: 'Status',
         focus: 'Focus',
-        statusValue: 'Registration In Progress',
+        statusValue: 'Registration of Patents , P1, P2, P3, P4, P4+',
         focusValue: 'IoT Energy Solutions'
       },
       footer: {
