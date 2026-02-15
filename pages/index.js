@@ -84,7 +84,7 @@ export default function Home() {
         phase1Desc: 'Razvoj i testiranje EnergyMonitor .',
         phase2Title: 'Faza 2: Lansiranje',
         phase2Time: '2026-2027',
-        phase2Desc: 'Proizvodnja 2,000 jedinica, ekspanzija na EU tržište.',
+        phase2Desc: 'Pilotprojekti i ekspanzija na EU tržište.',
         phase3Title: 'Faza 3: Skaliranje',
         phase3Time: '2027+',
         phase3Desc: 'VPP integracija, cilj €1M+ prihoda.'
@@ -183,10 +183,10 @@ export default function Home() {
         missionText: 'VolMax Studio Lab aims to revolutionize energy management by combining IoT and AI technologies. We start with NILM monitoring and expand to smart grid integration by 2027.',
         phase1Title: 'Phase 1: Prototype',
         phase1Time: '2025-2026',
-        phase1Desc: 'Develop and test EnergyMonitor with 500 beta units.',
+        phase1Desc: 'Develop and test EnergyMonitor.',
         phase2Title: 'Phase 2: Launch',
         phase2Time: '2026-2027',
-        phase2Desc: 'Production of 2,000 units, EU market expansion.',
+        phase2Desc: 'Pilot projects and EU market expansion.',
         phase3Title: 'Phase 3: Scale',
         phase3Time: '2027+',
         phase3Desc: 'VPP integration, target €1M+ revenue.'
