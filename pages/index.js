@@ -299,12 +299,11 @@ export default function Home() {
               {t.products.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16">
             
-            {/* EnergyMonitor -  */}
+            {/* EnergyMonitor */}
             <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-teal-400/50 transition-all group">
-              
-              {/* Slika Uređaja */}
               <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-teal-500/20">
                 <Image 
                   src="/device.png" 
@@ -312,10 +311,8 @@ export default function Home() {
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                {/* Blagi sjaj preko slike */}
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
               </div>
-
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.energyMonitor.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.energyMonitor.tagline}</p>
               <p className="text-gray-400 mb-6">
@@ -329,48 +326,41 @@ export default function Home() {
               <div className="text-teal-400 font-semibold">{t.products.energyMonitor.status}</div>
             </div>
 
-           {/* SmartGrid Hub */}
+            {/* SmartGrid Hub */}
             <div className="bg-gradient-to-br from-blue-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-blue-400/50 transition-all group">
-              
-              {/* --- NOVA SLIKA ZA GRID --- */}
               <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-500/20">
                 <Image 
-                  src="/grid.png"   // <-- Obavezno ubaci grid.png u public folder
+                  src="/grid.png" 
                   alt="SmartGrid Hub"
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                {/* Plavi sjaj preko slike */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
               </div>
-              {/* -------------------------- */}
-               
-
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.smartGrid.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.smartGrid.tagline}</p>
+              <p className="text-gray-400 mb-6">
+                {t.products.smartGrid.description}
+              </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.smartGrid.tag1}</span>
                 <span className="px-3 py-1 bg-teal-500/30 text-teal-200 rounded-full text-sm">{t.products.smartGrid.tag2}</span>
                 <span className="px-3 py-1 bg-green-500/30 text-green-200 rounded-full text-sm">{t.products.smartGrid.tag3}</span>
               </div>
               <div className="text-blue-400 font-semibold">{t.products.smartGrid.status}</div>
-               
             </div>
-            </div>
-                 {/* P2 Smart Agriculture - NOVA KARTICA */}
+
+            {/* P2 Smart Agriculture */}
             <div className="bg-gradient-to-br from-green-900/50 to-teal-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-green-400/50 transition-all group">
-              
-              {/* Slika */}
               <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-green-500/20">
                 <Image 
-                  src="/agri.png"   // <-- Trebaće ti ova slika
+                  src="/agri.png" 
                   alt="P2 Smart Agriculture"
                   fill
                   className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 to-transparent"></div>
               </div>
-
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.p2Agri.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.p2Agri.tagline}</p>
               <p className="text-gray-400 mb-6">
@@ -382,27 +372,19 @@ export default function Home() {
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.p2Agri.tag3}</span>
               </div>
               <div className="text-green-400 font-semibold">{t.products.p2Agri.status}</div>
-              
             </div>
-                {/* P4 Neuromorphic Kernel - THE BEAST */}
+
+            {/* P4 Neuromorphic Kernel */}
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-purple-400/50 transition-all group">
-              
-              {/* Slika */}
               <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-purple-500/20">
                 <Image 
                   src="/p4chip.png" 
                   alt="P4 Neuromorphic Kernel"
                   fill
-                  // PROMENA OVDE:
-                  // 1. "object-contain" umesto "object-cover" (da se vidi cela slika)
-                  // 2. Dodat "p-4" (da se slika malo odmakne od ivica)
                   className="object-contain p-4 transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                
-                {/* Ljubičasti sjaj smo ostavili, ali ga činimo suptilnijim (opacity-20) da ne prekriva čip */}
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none"></div>
               </div>
-
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.p4Chip.title}</h3>
               <p className="text-gray-300 mb-4">{t.products.p4Chip.tagline}</p>
               <p className="text-gray-400 mb-6">
@@ -415,6 +397,7 @@ export default function Home() {
               </div>
               <div className="text-amber-400 font-semibold">{t.products.p4Chip.status}</div>
             </div>
+
           </div>
         </div>
       </section>
