@@ -382,19 +382,25 @@ export default function Home() {
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.p2Agri.tag3}</span>
               </div>
               <div className="text-green-400 font-semibold">{t.products.p2Agri.status}</div>
+              
+            </div>
                 {/* P4 Neuromorphic Kernel - THE BEAST */}
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-purple-400/50 transition-all group">
               
               {/* Slika */}
               <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-purple-500/20">
                 <Image 
-                  src="/p4chip.png"   // <-- Treba nam ova slika
+                  src="/p4chip.png" 
                   alt="P4 Neuromorphic Kernel"
                   fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                  // PROMENA OVDE:
+                  // 1. "object-contain" umesto "object-cover" (da se vidi cela slika)
+                  // 2. Dodat "p-4" (da se slika malo odmakne od ivica)
+                  className="object-contain p-4 transform group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                {/* Ljubičasti sjaj za "High Tech" osećaj */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent"></div>
+                
+                {/* Ljubičasti sjaj smo ostavili, ali ga činimo suptilnijim (opacity-20) da ne prekriva čip */}
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none"></div>
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-4">{t.products.p4Chip.title}</h3>
@@ -407,7 +413,6 @@ export default function Home() {
                 <span className="px-3 py-1 bg-pink-500/30 text-pink-200 rounded-full text-sm">{t.products.p4Chip.tag2}</span>
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">{t.products.p4Chip.tag3}</span>
               </div>
-              {/* Ovde stavljamo status žutom/narandžastom bojom jer je PCT važan */}
               <div className="text-amber-400 font-semibold">{t.products.p4Chip.status}</div>
             </div>
           </div>
