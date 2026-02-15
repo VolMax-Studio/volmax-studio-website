@@ -25,7 +25,7 @@ export default function Home() {
         title: 'Naša IoT Rešenja',
         subtitle: 'Pametni uređaji koji transformišu upravljanje energijom',
         energyMonitor: {
-          title: 'EnergyMonitor',
+          title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
           description: 'AI uređaj za praćenje potrošnje energije koji automatski prepoznaje uređaje i optimizuje vašu potrošnju. Idealan za domove sa solarnim panelima ili visokim računima.',
           tag1: 'AI Analiza',
@@ -34,7 +34,7 @@ export default function Home() {
           status: 'Status: Aktivni Razvoj'
         },
         smartGrid: {
-          title: 'SmartGrid Hub',
+          title: 'P3: Neuromorfni SmartGrid Hub',
           tagline: 'Virtual Power Plant Integracija',
           description: 'Buduća platforma za povezivanje domaćinstava sa pametnim mrežama. Omogućava trgovinu energijom i učešće u VPP ekosistemu.',
           tag1: 'VPP Podrška',
@@ -118,7 +118,7 @@ export default function Home() {
         title: 'Our IoT Solutions',
         subtitle: 'Smart devices transforming energy management',
         energyMonitor: {
-          title: 'EnergyMonitor',
+          title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
           description: 'AI-powered device for energy monitoring that automatically recognizes appliances and optimizes your consumption. Ideal for homes with solar panels or high bills.',
           tag1: 'AI Analysis',
@@ -127,7 +127,7 @@ export default function Home() {
           status: 'Status: Active Development'
         },
         smartGrid: {
-          title: 'SmartGrid Hub',
+          title: 'P3: Neuromorfic SmartGrid Hub',
           tagline: 'Virtual Power Plant Integration',
           description: 'Future platform for connecting households to smart grids. Enables energy trading and participation in VPP ecosystem.',
           tag1: 'VPP Support',
@@ -281,7 +281,7 @@ export default function Home() {
               {t.products.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
             
             {/* EnergyMonitor -  */}
             <div className="bg-gradient-to-br from-teal-900/50 to-blue-900/50 rounded-2xl p-8 backdrop-blur border border-white/10 hover:border-teal-400/50 transition-all group">
