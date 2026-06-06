@@ -75,7 +75,8 @@ export default function Home() {
           battery: 'SoH / RUL / thermal anomaly on NASA PCoE data',
           tools: 'Importable Python library: RMS, THD, FFT, wavelet, z-score',
           leakage: 'WDN leak detection — DWT + RF + sensitivity matrix',
-          mcsa: 'MCSA diagnostics for 3-phase induction motor faults: BRB, bearing defects, stator short circuits'
+          mcsa: 'MCSA diagnostics for 3-phase induction motor faults: BRB, bearing defects, stator short circuits',
+          cwru: 'CWRU bearing defect diagnostics (BPFO, BPFI, BSF, FTF) using Squared Envelope Spectrum'
         }
       },
       about: {
@@ -98,7 +99,7 @@ export default function Home() {
         missionText: 'VolMax Studio Lab ima za cilj optimizaciju upravljanja energijom kombinacijom IoT i AI tehnologija.',
         phase1Title: 'Faza 1: Otvoreni Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Razvoj i verifikacija 6 ključnih ML/DSP portfolija (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA).',
+        phase1Desc: 'Razvoj i verifikacija 7 ključnih ML/DSP portfolija (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing).',
         phase2Title: 'Faza 2: Pilot Projekti',
         phase2Time: '2026',
         phase2Desc: 'Implementacija i testiranje algoritama na realnim STM32G4 platformama.',
@@ -194,7 +195,8 @@ export default function Home() {
           battery: 'SoH / RUL / thermal anomaly on NASA PCoE data',
           tools: 'Importable Python library: RMS, THD, FFT, wavelet, z-score',
           leakage: 'WDN leak detection — DWT + RF + sensitivity matrix',
-          mcsa: 'MCSA diagnostics for 3-phase induction motor faults: BRB, bearing defects, stator short circuits'
+          mcsa: 'MCSA diagnostics for 3-phase induction motor faults: BRB, bearing defects, stator short circuits',
+          cwru: 'CWRU bearing defect diagnostics (BPFO, BPFI, BSF, FTF) using Squared Envelope Spectrum'
         }
       },
       about: {
@@ -217,7 +219,7 @@ export default function Home() {
         missionText: 'VolMax Studio Lab aims to optimize energy management by combining IoT and AI technologies.',
         phase1Title: 'Phase 1: Open Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Development and validation of 6 key ML/DSP portfolios (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA).',
+        phase1Desc: 'Development and validation of 7 key ML/DSP portfolios (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing).',
         phase2Title: 'Phase 2: Pilot Projects',
         phase2Time: '2026',
         phase2Desc: 'Algorithm implementation and testing on real STM32G4 platforms.',
@@ -454,7 +456,8 @@ export default function Home() {
               { id: 'battery', title: 'Battery_Health_Portfolio', url: 'https://github.com/VolMax-Studio/Battery_Health_Portfolio', desc: t.portfolio.repos.battery },
               { id: 'tools', title: 'Power_Signal_Tools_Portfolio', url: 'https://github.com/VolMax-Studio/Power_Signal_Tools_Portfolio', desc: t.portfolio.repos.tools },
               { id: 'leakage', title: 'Fluid_Leakage_Detection_Portfolio', url: 'https://github.com/VolMax-Studio/Fluid_Leakage_Detection_Portfolio', desc: t.portfolio.repos.leakage },
-              { id: 'mcsa', title: 'MCSA_Fault_Diagnostics_Portfolio', url: 'https://github.com/VolMax-Studio/MCSA_Fault_Diagnostics_Portfolio', desc: t.portfolio.repos.mcsa }
+              { id: 'mcsa', title: 'MCSA_Fault_Diagnostics_Portfolio', url: 'https://github.com/VolMax-Studio/MCSA_Fault_Diagnostics_Portfolio', desc: t.portfolio.repos.mcsa },
+              { id: 'cwru', title: 'CWRU_Bearing_Diagnostics', url: 'https://github.com/VolMax-Studio/CWRU_Bearing_Diagnostics', desc: t.portfolio.repos.cwru }
             ].map((repo) => (
               <div key={repo.id} className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all flex flex-col justify-between group">
                 <div>
