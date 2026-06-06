@@ -9,6 +9,7 @@ export default function Home() {
       nav: {
         home: 'Početna',
         products: 'Proizvodi',
+        portfolio: 'Portfolio',
         about: 'O Nama',
         vision: 'Vizija',
         contact: 'Kontakt'
@@ -17,9 +18,9 @@ export default function Home() {
         title1: 'Pametna Rešenja za',
         title2: 'Energetsku Efikasnost',
         subtitle: 'IoT i AI tehnologija za optimizaciju potrošnje električne energije',
-        description: 'VolMax Studio Lab razvija napredne NILM (Non-Intrusive Load Monitoring) uređaje koji koriste veštačku inteligenciju za praćenje i optimizaciju potrošnje energije u realnom vremenu.',
-        btnPrimary: 'Saznaj Više',
-        btnSecondary: 'Kontaktiraj Nas'
+        description: 'VolMax Studio Lab razvija napredne NILM (Non-Intrusive Load Monitoring) uređaje i algoritme koji koriste mašinsko učenje za praćenje i optimizaciju potrošnje energije.',
+        btnPrimary: 'Otvoreni Portfolio',
+        btnSecondary: 'Kontakt'
       },
       products: {
         title: 'Naša IoT Rešenja',
@@ -27,39 +28,54 @@ export default function Home() {
         energyMonitor: {
           title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
-          description: 'AI uređaj za praćenje potrošnje energije koji automatski prepoznaje uređaje i optimizuje vašu potrošnju. Idealan za domove sa solarnim panelima ili visokim računima.',
+          description: 'AI-powered sistem za praćenje potrošnje energije koji automatski prepoznaje uređaje i optimizuje potrošnju. Idealan za domove sa solarnim panelima.',
           tag1: 'AI Analiza',
           tag2: 'Real-Time Podaci',
-          tag3: 'Ušteda 20-30%',
+          tag3: 'Simulacione Analize',
           status: 'Status: Aktivni Razvoj'
         },
         smartGrid: {
-          title: 'P3: Neuromorfni SmartGrid Hub',
+          title: 'P3: SmartGrid Hub',
           tagline: 'Virtual Power Plant Integracija',
-          description: 'Buduća platforma za povezivanje domaćinstava sa pametnim mrežama. Omogućava trgovinu energijom i učešće u VPP ekosistemu.',
+          description: 'Buduća platforma za povezivanje domaćinstava sa pametnim mrežama. Omogućava lokalnu optimizaciju i učešće u VPP ekosistemu.',
           tag1: 'VPP Podrška',
           tag2: 'Grid Optimizacija',
           tag3: 'Skalabilnost',
-          status: 'Status: Koncept'
+          status: 'Status: R&D Koncept'
         },
         p2Agri: {
-            title: 'P2: Smart Agriculture',
-            tagline: 'Autonomna Kontrola Navodnjavanja',
-            description: 'Primena P4 čipa za preciznu kontrolu pumpi i sistema za navodnjavanje. Radi na solarne panele, optimizuje pritisak i štedi vodu na udaljenim lokacijama.',
-            tag1: 'Solar Ready',
-            tag2: 'Pump Control',
-            tag3: 'Ušteda Vode',
-            status: 'Status: Patent Pending'
-          },
+          title: 'P2: Smart Agriculture',
+          tagline: 'Autonomna Kontrola Navodnjavanja',
+          description: 'Primena P4 kernela za preciznu kontrolu pumpi i sistema za navodnjavanje. Optimizovano za solarne panele i uštedu vode na udaljenim lokacijama.',
+          tag1: 'Solar Ready',
+          tag2: 'Pump Control',
+          tag3: 'Ušteda Vode',
+          status: 'Status: R&D Koncept'
+        },
         p4Chip: {
-            title: 'P4 Neuromorphic Kernel',
-            tagline: 'Robotski Refleks & Termodinamika',
-            description: 'Srce VolMax sistema. Revolucionarni kontroler koji koristi termodinamičku relaksaciju da eliminiše zagrevanje motora. Pretvara tromu mašinu u organizam sa refleksima.',
-            tag1: 'Hladan Rad (Cool Run)',
-            tag2: '<1µs Latencija',
-            tag3: 'Bez Hladnjaka',
-            status: 'Status: PCT Pending' // Ovo zvuči ozbiljno!
-          }
+          title: 'P4 Hardware Safety Arbiter',
+          tagline: 'Hardverski interlock & Arbitrator',
+          description: 'LM339 komparator + 74HC74 SR latch hardverski interlock sa osciloskopski verifikovanom latencijom prekida: 1.02µs ±0.1µs preko 1,000 testova.',
+          tag1: 'Latencija 1.02µs',
+          tag2: 'Serbian IPO',
+          tag3: 'Hardverski Interlock',
+          status: 'Status: Prijavljen prioritet (Serbian IPO)'
+        }
+      },
+      portfolio: {
+        title: 'Otvoreni Portfolio',
+        subtitle: 'Verifikovani i javno dostupni ML & DSP repozitorijumi sa 100% prolaznim testovima',
+        repo: 'Repozitorijum',
+        desc: 'Opis',
+        status: 'Status',
+        viewCode: 'Pogledaj Kod',
+        repos: {
+          pq: '17-class IEC 61000 disturbance classifier, ~78% acc',
+          nilm: 'Energy disaggregation on REDD benchmark data',
+          battery: 'SoH / RUL / thermal anomaly on NASA PCoE data',
+          tools: 'Importable Python library: RMS, THD, FFT, wavelet, z-score',
+          leakage: 'WDN leak detection — DWT + RF + sensitivity matrix'
+        }
       },
       about: {
         title: 'O Projektu',
@@ -69,25 +85,25 @@ export default function Home() {
         exp1: 'Električar sa 20+ godina praktičnog iskustva',
         exp2: 'Web Development (profesionalna obuka)',
         exp3: 'Python & AI istraživanje',
-        exp4: 'AR i Smart Home tehnologije',
+        exp4: 'Smart Home i energetski sistemi',
         quote: 'Kombinujem 20 godina električarskog iskustva sa modernim tehnologijama da rešim realne energetske izazove.',
         research: 'Dodatna Istraživanja',
-        researchDesc: 'Pored praćenja energije, istražujemo primene u proširenoj stvarnosti (AR) za vizualizaciju elektro sistema i AI ekosistemima. Ovi projekti ostaju u fazi istraživanja dok fokusiramo resurse na razvoj EnergyMonitor uređaja.'
+        researchDesc: 'Istražujemo napredne algoritme procesiranja signala na mikrokontrolerima i prenosne filterske banke. Fokus ostaje na razvoju EnergyMonitor i Hardware Safety Arbiter modula.'
       },
       vision: {
         title: 'Naša Vizija',
         subtitle: 'Put ka održivoj energetskoj budućnosti',
         mission: 'Naša Misija',
-        missionText: 'VolMax Studio Lab ima za cilj revolucionisanje upravljanja energijom kombinacijom IoT i AI tehnologija. Počinjemo sa NILM monitoringom i širimo se ka smart grid integraciji do 2027. godine.',
-        phase1Title: 'Faza 1: Prototip',
+        missionText: 'VolMax Studio Lab ima za cilj optimizaciju upravljanja energijom kombinacijom IoT i AI tehnologija.',
+        phase1Title: 'Faza 1: Otvoreni Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Razvoj i testiranje EnergyMonitor .',
-        phase2Title: 'Faza 2: Lansiranje',
-        phase2Time: '2026-2027',
-        phase2Desc: 'Pilotprojekti i ekspanzija na EU tržište.',
-        phase3Title: 'Faza 3: Skaliranje',
-        phase3Time: '2027+',
-        phase3Desc: 'VPP integracija, cilj €1M+ prihoda.'
+        phase1Desc: 'Razvoj i verifikacija 5 ključnih ML/DSP portfolija (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection).',
+        phase2Title: 'Faza 2: Pilot Projekti',
+        phase2Time: '2026',
+        phase2Desc: 'Implementacija i testiranje algoritama na realnim STM32G4 platformama.',
+        phase3Title: 'Faza 3: Integracija',
+        phase3Time: '2026+',
+        phase3Desc: 'Integracija edge ML rešenja sa industrijskim partnerima i VPP provajderima.'
       },
       contact: {
         title: 'Kontaktirajte Nas',
@@ -100,17 +116,18 @@ export default function Home() {
         github: 'GitHub',
         status: 'Status',
         focus: 'Fokus',
-        statusValue: 'Registracija Patent 1, 2, 3, 4 i 4+',
+        statusValue: 'Prijave prioriteta: P1, P4 (Serbian IPO)',
         focusValue: 'IoT Energetska Rešenja'
       },
       footer: {
-        copyright: '© 2025 VolMax Studio Lab d.o.o. - Pioniri IoT Energetske Inovacije'
+        copyright: '© 2025-2026 VolMax Studio Lab d.o.o.'
       }
     },
     en: {
       nav: {
         home: 'Home',
         products: 'Products',
+        portfolio: 'Portfolio',
         about: 'About',
         vision: 'Vision',
         contact: 'Contact'
@@ -119,9 +136,9 @@ export default function Home() {
         title1: 'Smart Solutions for',
         title2: 'Energy Efficiency',
         subtitle: 'IoT and AI technology for electrical energy consumption optimization',
-        description: 'VolMax Studio Lab develops advanced NILM (Non-Intrusive Load Monitoring) devices that use artificial intelligence to track and optimize energy consumption in real-time.',
-        btnPrimary: 'Learn More',
-        btnSecondary: 'Contact Us'
+        description: 'VolMax Studio Lab develops advanced NILM (Non-Intrusive Load Monitoring) devices and algorithms using machine learning to track and optimize energy consumption.',
+        btnPrimary: 'Open Portfolio',
+        btnSecondary: 'Contact'
       },
       products: {
         title: 'Our IoT Solutions',
@@ -129,39 +146,54 @@ export default function Home() {
         energyMonitor: {
           title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
-          description: 'AI-powered device for energy monitoring that automatically recognizes appliances and optimizes your consumption. Ideal for homes with solar panels or high bills.',
+          description: 'AI-powered energy monitoring system that automatically recognizes appliances and optimizes consumption. Ideal for homes with solar panels.',
           tag1: 'AI Analysis',
           tag2: 'Real-Time Data',
-          tag3: 'Save 20-30%',
+          tag3: 'Simulation Analysis',
           status: 'Status: Active Development'
         },
         smartGrid: {
-          title: 'P3: Neuromorfic SmartGrid Hub',
+          title: 'P3: SmartGrid Hub',
           tagline: 'Virtual Power Plant Integration',
-          description: 'Future platform for connecting households to smart grids. Enables energy trading and participation in VPP ecosystem.',
+          description: 'Future platform for connecting households to smart grids. Enables localized optimization and participation in the VPP ecosystem.',
           tag1: 'VPP Support',
           tag2: 'Grid Optimization',
           tag3: 'Scalability',
-          status: 'Status: Concept'
+          status: 'Status: R&D Concept'
         },
         p2Agri: {
-            title: 'P2: Smart Agriculture',
-            tagline: 'Autonomous Irrigation Control',
-            description: 'Application of P4 chip for precision control of pumps and irrigation systems. Solar-ready, optimizes pressure, and saves water in remote locations.',
-            tag1: 'Solar Ready',
-            tag2: 'Pump Control',
-            tag3: 'Water Saving',
-            status: 'Status: Patent Pending'
-          },
+          title: 'P2: Smart Agriculture',
+          tagline: 'Autonomous Irrigation Control',
+          description: 'Application of the P4 kernel for precision pump and irrigation control. Optimized for solar panels and water saving at remote locations.',
+          tag1: 'Solar Ready',
+          tag2: 'Pump Control',
+          tag3: 'Water Saving',
+          status: 'Status: R&D Concept'
+        },
         p4Chip: {
-            title: 'P4 Neuromorphic Kernel',
-            tagline: 'Robotic Reflex & Thermodynamics',
-            description: 'The heart of VolMax. A revolutionary controller utilizing thermodynamic relaxation to eliminate motor heating. Turns sluggish machines into organisms with reflexes.',
-            tag1: 'Cool Run Tech',
-            tag2: '<1µs Latency',
-            tag3: 'Heatsink-Free',
-            status: 'Status: PCT Pending'
-          }
+          title: 'P4 Hardware Safety Arbiter',
+          tagline: 'Hardware interlock & Arbiter',
+          description: 'LM339 comparator + 74HC74 SR latch hardware interlock with oscilloscope-validated interrupt latency: 1.02µs ±0.1µs over 1,000 tests.',
+          tag1: '1.02µs Latency',
+          tag2: 'Serbian IPO',
+          tag3: 'Hardware Interlock',
+          status: 'Status: Priority Filed (Serbian IPO)'
+        }
+      },
+      portfolio: {
+        title: 'Open Portfolio',
+        subtitle: 'Verified and open-source ML & DSP repositories with 100% passing tests',
+        repo: 'Repository',
+        desc: 'Description',
+        status: 'Status',
+        viewCode: 'View Code',
+        repos: {
+          pq: '17-class IEC 61000 disturbance classifier, ~78% acc',
+          nilm: 'Energy disaggregation on REDD benchmark data',
+          battery: 'SoH / RUL / thermal anomaly on NASA PCoE data',
+          tools: 'Importable Python library: RMS, THD, FFT, wavelet, z-score',
+          leakage: 'WDN leak detection — DWT + RF + sensitivity matrix'
+        }
       },
       about: {
         title: 'About the Project',
@@ -171,25 +203,25 @@ export default function Home() {
         exp1: 'Electrician with 20+ years hands-on experience',
         exp2: 'Web Development (professional training)',
         exp3: 'Python & AI Research',
-        exp4: 'AR and Smart Home Technologies',
+        exp4: 'Smart Home and power systems',
         quote: 'Combining 20 years of electrical expertise with modern technology to solve real-world energy challenges.',
         research: 'Additional Research',
-        researchDesc: 'Beyond energy monitoring, we explore applications in augmented reality (AR) for electrical system visualization and AI ecosystems. These projects remain in exploratory phases as we focus resources on delivering EnergyMonitor.'
+        researchDesc: 'We explore advanced signal processing algorithms on microcontrollers and portable filter banks. Focus remains on developing the EnergyMonitor and Hardware Safety Arbiter modules.'
       },
       vision: {
         title: 'Our Vision',
         subtitle: 'Path to sustainable energy future',
         mission: 'Our Mission',
-        missionText: 'VolMax Studio Lab aims to revolutionize energy management by combining IoT and AI technologies. We start with NILM monitoring and expand to smart grid integration by 2027.',
-        phase1Title: 'Phase 1: Prototype',
+        missionText: 'VolMax Studio Lab aims to optimize energy management by combining IoT and AI technologies.',
+        phase1Title: 'Phase 1: Open Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Develop and test EnergyMonitor.',
-        phase2Title: 'Phase 2: Launch',
-        phase2Time: '2026-2027',
-        phase2Desc: 'Pilot projects and EU market expansion.',
-        phase3Title: 'Phase 3: Scale',
-        phase3Time: '2027+',
-        phase3Desc: 'VPP integration, target €1M+ revenue.'
+        phase1Desc: 'Development and validation of 5 key ML/DSP portfolios (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection).',
+        phase2Title: 'Phase 2: Pilot Projects',
+        phase2Time: '2026',
+        phase2Desc: 'Algorithm implementation and testing on real STM32G4 platforms.',
+        phase3Title: 'Phase 3: Integration',
+        phase3Time: '2026+',
+        phase3Desc: 'Integration of edge ML solutions with industrial partners and VPP providers.'
       },
       contact: {
         title: 'Contact Us',
@@ -202,11 +234,11 @@ export default function Home() {
         github: 'GitHub',
         status: 'Status',
         focus: 'Focus',
-        statusValue: 'Registration of Patents , P1, P2, P3, P4, P4+',
+        statusValue: 'Patent filings: P1, P4 (Serbian IPO)',
         focusValue: 'IoT Energy Solutions'
       },
       footer: {
-        copyright: '© 2025 VolMax Studio Lab d.o.o. - Pioneering IoT Energy Innovation'
+        copyright: '© 2025-2026 VolMax Studio Lab d.o.o.'
       }
     }
   };
@@ -230,6 +262,7 @@ export default function Home() {
             <div className="hidden md:flex space-x-8 text-white items-center">
               <a href="#home" className="hover:text-teal-400 transition-colors">{t.nav.home}</a>
               <a href="#products" className="hover:text-teal-400 transition-colors">{t.nav.products}</a>
+              <a href="#portfolio" className="hover:text-teal-400 transition-colors">{t.nav.portfolio}</a>
               <a href="#about" className="hover:text-teal-400 transition-colors">{t.nav.about}</a>
               <a href="#vision" className="hover:text-teal-400 transition-colors">{t.nav.vision}</a>
               <a href="#contact" className="hover:text-teal-400 transition-colors">{t.nav.contact}</a>
@@ -398,6 +431,52 @@ export default function Home() {
               <div className="text-amber-400 font-semibold">{t.products.p4Chip.status}</div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-black/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-white mb-6">{t.portfolio.title}</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {t.portfolio.subtitle}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { id: 'pq', title: 'PowerQuality_Classifier_Portfolio', url: 'https://github.com/VolMax-Studio/PowerQuality_Classifier_Portfolio', desc: t.portfolio.repos.pq },
+              { id: 'nilm', title: 'NILM_Disaggregation_Portfolio', url: 'https://github.com/VolMax-Studio/NILM_Disaggregation_Portfolio', desc: t.portfolio.repos.nilm },
+              { id: 'battery', title: 'Battery_Health_Portfolio', url: 'https://github.com/VolMax-Studio/Battery_Health_Portfolio', desc: t.portfolio.repos.battery },
+              { id: 'tools', title: 'Power_Signal_Tools_Portfolio', url: 'https://github.com/VolMax-Studio/Power_Signal_Tools_Portfolio', desc: t.portfolio.repos.tools },
+              { id: 'leakage', title: 'Fluid_Leakage_Detection_Portfolio', url: 'https://github.com/VolMax-Studio/Fluid_Leakage_Detection_Portfolio', desc: t.portfolio.repos.leakage }
+            ].map((repo) => (
+              <div key={repo.id} className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all flex flex-col justify-between group">
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-3 break-all group-hover:text-teal-400 transition-colors">
+                    {repo.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                    {repo.desc}
+                  </p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-xs px-2.5 py-1 bg-teal-500/20 text-teal-300 rounded-full font-medium border border-teal-500/10">
+                    Live
+                  </span>
+                  <a 
+                    href={repo.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1"
+                  >
+                    {t.portfolio.viewCode} &rarr;
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
