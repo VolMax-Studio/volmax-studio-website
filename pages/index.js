@@ -79,7 +79,8 @@ export default function Home() {
           cwru: 'CWRU bearing defect diagnostics (BPFO, BPFI, BSF, FTF) using Squared Envelope Spectrum',
           grid: 'CE grid frequency dynamics analysis — Swing Equation simulation & EN 50160 compliance',
           pv: 'PV system anomaly detection & MPPT cloud transient tracking using NREL TMY3 data',
-          transformer: 'Transformer health assessment: IEC 60076-7 thermal model, Arrhenius aging, and DGA Duval triangle'
+          transformer: 'Transformer health assessment: IEC 60076-7 thermal model, Arrhenius aging, and DGA Duval triangle',
+          vpp: 'VPP active frequency regulation: primary (FCR) and secondary (AGC) control loops with BESS/PV/FlexLoad dispatch'
         }
       },
       about: {
@@ -102,7 +103,7 @@ export default function Home() {
         missionText: 'VolMax Studio Lab ima za cilj optimizaciju upravljanja energijom kombinacijom IoT i AI tehnologija.',
         phase1Title: 'Faza 1: Otvoreni Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Razvoj i verifikacija 10 ključnih ML/DSP portfolija (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing, Grid Frequency, PV Anomaly, Transformer Health).',
+        phase1Desc: 'Razvoj i verifikacija 11 ključnih ML/DSP portfolija (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing, Grid Frequency, PV Anomaly, Transformer Health, VPP Regulation).',
         phase2Title: 'Faza 2: Pilot Projekti',
         phase2Time: '2026',
         phase2Desc: 'Implementacija i testiranje algoritama na realnim STM32G4 platformama.',
@@ -202,7 +203,8 @@ export default function Home() {
           cwru: 'CWRU bearing defect diagnostics (BPFO, BPFI, BSF, FTF) using Squared Envelope Spectrum',
           grid: 'CE grid frequency dynamics analysis — Swing Equation simulation & EN 50160 compliance',
           pv: 'PV system anomaly detection & MPPT cloud transient tracking using NREL TMY3 data',
-          transformer: 'Transformer health assessment: IEC 60076-7 thermal model, Arrhenius aging, and DGA Duval triangle'
+          transformer: 'Transformer health assessment: IEC 60076-7 thermal model, Arrhenius aging, and DGA Duval triangle',
+          vpp: 'VPP active frequency regulation: primary (FCR) and secondary (AGC) control loops with BESS/PV/FlexLoad dispatch'
         }
       },
       about: {
@@ -225,7 +227,7 @@ export default function Home() {
         missionText: 'VolMax Studio Lab aims to optimize energy management by combining IoT and AI technologies.',
         phase1Title: 'Phase 1: Open Portfolio',
         phase1Time: '2025-2026',
-        phase1Desc: 'Development and validation of 10 key ML/DSP portfolios (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing, Grid Frequency, PV Anomaly, Transformer Health).',
+        phase1Desc: 'Development and validation of 11 key ML/DSP portfolios (Power Quality, NILM, Battery Health, Signal Tools, Leakage Detection, MCSA, CWRU Bearing, Grid Frequency, PV Anomaly, Transformer Health, VPP Regulation).',
         phase2Title: 'Phase 2: Pilot Projects',
         phase2Time: '2026',
         phase2Desc: 'Algorithm implementation and testing on real STM32G4 platforms.',
@@ -466,7 +468,8 @@ export default function Home() {
               { id: 'cwru', title: 'CWRU_Bearing_Diagnostics', url: 'https://github.com/VolMax-Studio/CWRU_Bearing_Diagnostics', desc: t.portfolio.repos.cwru },
               { id: 'grid', title: 'Grid_Frequency_Analysis', url: 'https://github.com/VolMax-Studio/Grid_Frequency_Analysis', desc: t.portfolio.repos.grid },
               { id: 'pv', title: 'PV_Anomaly_Detection', url: 'https://github.com/VolMax-Studio/PV_Anomaly_Detection', desc: t.portfolio.repos.pv },
-              { id: 'transformer', title: 'Transformer_Health_Portfolio', url: 'https://github.com/VolMax-Studio/Transformer_Health_Portfolio', desc: t.portfolio.repos.transformer }
+              { id: 'transformer', title: 'Transformer_Health_Portfolio', url: 'https://github.com/VolMax-Studio/Transformer_Health_Portfolio', desc: t.portfolio.repos.transformer },
+              { id: 'vpp', title: 'VPP_Frequency_Regulation', url: 'https://github.com/VolMax-Studio/VPP_Frequency_Regulation', desc: t.portfolio.repos.vpp }
             ].map((repo) => (
               <div key={repo.id} className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all flex flex-col justify-between group">
                 <div>
