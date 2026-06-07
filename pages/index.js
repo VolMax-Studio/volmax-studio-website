@@ -28,20 +28,20 @@ export default function Home() {
         energyMonitor: {
           title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
-          description: 'AI-powered sistem za praćenje potrošnje energije koji automatski prepoznaje uređaje i optimizuje potrošnju. Idealan za domove sa solarnim panelima.',
+          description: 'AI-powered sistem za praćenje potrošnje energije koji automatski prepoznaje uređaje i optimizuje potrošnju. Cilj: 20-30% smanjenje potrošnje na bazi NILM benchmark studija.',
           tag1: 'AI Analiza',
           tag2: 'Real-Time Podaci',
           tag3: 'Simulacione Analize',
           status: 'Status: Aktivni Razvoj'
         },
         smartGrid: {
-          title: 'P3: SmartGrid Hub',
-          tagline: 'Virtual Power Plant Integracija',
-          description: 'Buduća platforma za povezivanje domaćinstava sa pametnim mrežama. Omogućava lokalnu optimizaciju i učešće u VPP ekosistemu.',
-          tag1: 'VPP Podrška',
-          tag2: 'Grid Optimizacija',
-          tag3: 'Skalabilnost',
-          status: 'Status: R&D Koncept'
+          title: 'SmartGrid Monitor',
+          tagline: 'VPP-ready arhitektura — priprema za buduće integracije',
+          description: 'Monitoring energetske efikasnosti i detekcija anomalija u mreži. Kompatibilno sa ENTSO-E CE FCR/aFRR specifikacijama (simulacija).',
+          tag1: 'VPP Ready',
+          tag2: 'Grid Monitoring',
+          tag3: 'Algoritamski R&D',
+          status: 'Status: R&D koncept, zavisi od regulatornog razvoja tržišta'
         },
         p2Agri: {
           title: 'P2: Smart Agriculture',
@@ -152,20 +152,20 @@ export default function Home() {
         energyMonitor: {
           title: 'P1: EnergyMonitor',
           tagline: 'Non-Intrusive Load Monitoring',
-          description: 'AI-powered energy monitoring system that automatically recognizes appliances and optimizes consumption. Ideal for homes with solar panels.',
+          description: 'AI-powered energy monitoring system that automatically recognizes appliances and optimizes consumption. Target: 20-30% reduction based on NILM benchmark studies.',
           tag1: 'AI Analysis',
           tag2: 'Real-Time Data',
           tag3: 'Simulation Analysis',
           status: 'Status: Active Development'
         },
         smartGrid: {
-          title: 'P3: SmartGrid Hub',
-          tagline: 'Virtual Power Plant Integration',
-          description: 'Future platform for connecting households to smart grids. Enables localized optimization and participation in the VPP ecosystem.',
-          tag1: 'VPP Support',
-          tag2: 'Grid Optimization',
-          tag3: 'Scalability',
-          status: 'Status: R&D Concept'
+          title: 'SmartGrid Monitor',
+          tagline: 'VPP-ready architecture — preparing for future integrations',
+          description: 'Energy efficiency monitoring and grid anomaly detection. Compatible with ENTSO-E CE FCR/aFRR specifications (simulation).',
+          tag1: 'VPP Ready',
+          tag2: 'Grid Monitoring',
+          tag3: 'Algorithmic R&D',
+          status: 'Status: R&D concept, subject to regulatory market development'
         },
         p2Agri: {
           title: 'P2: Smart Agriculture',

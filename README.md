@@ -27,10 +27,10 @@ VolMax Studio Lab is a technology engineering company focused on domain-grounded
 *   Solar-ready pump control system using the P4 kernel to regulate pressure, eliminate mechanical hammering, and minimize water consumption in remote agricultural applications.
 *   **Status**: Prototype
 
-### P3: SmartGrid Hub
-**VPP (Virtual Power Plant) Integration**
-*   Conceptual edge monitoring platform for localized grid balancing, peer-to-peer energy sharing, and sub-cycle grid stability coordination.
-*   **Status**: Concept
+### SmartGrid Monitor
+**VPP-ready Grid Anomaly Detection**
+*   VPP-ready architecture concept. Energy efficiency monitoring and grid anomaly detection compatible with ENTSO-E CE specifications (simulation study).
+*   **Status**: R&D Concept (subject to regulatory market development)
 
 ### P4: Neuromorphic Kernel
 **Thermodynamic Motor Controller & Symplectic Integrator**
