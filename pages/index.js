@@ -55,7 +55,7 @@ export default function Home() {
         p4Chip: {
           title: 'P4 Hardware Safety Arbiter',
           tagline: 'Hardverski interlock & Arbitrator',
-          description: 'LM339 komparator + 74HC74 SR latch + BC547B NPN tranzistor cutoff interlock sa verifikovanom latencijom prekida: 1.02µs za logiku, 2.04µs za kompletnu petlju aktuatora.',
+          description: 'Hardverski interlock bez učešća softvera (analog-to-logic override) sa verifikovanom ukupnom latencijom prekida aktuatora od 2.04µs.',
           tag1: 'Latencija < 2.5µs',
           tag2: 'Serbian IPO',
           tag3: 'Hardverski Interlock',
@@ -179,7 +179,7 @@ export default function Home() {
         p4Chip: {
           title: 'P4 Hardware Safety Arbiter',
           tagline: 'Hardware interlock & Arbiter',
-          description: 'LM339 comparator + 74HC74 SR latch + BC547B NPN transistor cutoff interlock with verified latency: 1.02µs for logic, 2.04µs for the complete actuator loop.',
+          description: 'Hardware-enforced safety interlock (analog-to-logic override) with a verified total actuator loop cutoff latency of 2.04µs.',
           tag1: 'Latency < 2.5µs',
           tag2: 'Serbian IPO',
           tag3: 'Hardware Interlock',
