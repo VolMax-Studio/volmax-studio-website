@@ -5,6 +5,7 @@ const translations = {
   en: {
     nav: {
       services: "Services",
+      audit: "Battery ML Audit",
       method: "Method (P10)",
       proof: "Proof",
       about: "About",
@@ -89,6 +90,7 @@ const translations = {
   sr: {
     nav: {
       services: "Usluge",
+      audit: "Battery ML Audit",
       method: "Metod (P10)",
       proof: "Dokazi",
       about: "O nama",
@@ -201,6 +203,7 @@ export default function Home() {
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
             <a href="#services" className="hover:text-zinc-100 transition-colors">{t.nav.services}</a>
+            <a href="/audit" className="hover:text-zinc-100 transition-colors">{t.nav.audit}</a>
             <a href="#method" className="hover:text-zinc-100 transition-colors">{t.nav.method}</a>
             <a href="#proof" className="hover:text-zinc-100 transition-colors">{t.nav.proof}</a>
             <a href="#about" className="hover:text-zinc-100 transition-colors">{t.nav.about}</a>
