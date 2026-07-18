@@ -12,9 +12,10 @@ const translations = {
       contact: "Contact"
     },
     hero: {
-      title: "Independent verification for battery & energy-system ML.",
-      subtitle: "We don't build your model — we check whether its numbers survive contact with data they haven't seen.",
-      desc: "VolMax Studio Lab is an independent verification practice for battery and energy machine-learning models: leakage detection, metric-integrity audits, physical-consistency checks. Power electronics + domain-grounded ML, with every finding reproducible from source.",
+      title: "Making public claims independently verifiable.",
+      subtitle: "Independent verification for energy & battery claims — ML models, vendor datasheets, and public market telemetry. We don't build the model and don't operate the asset; we check whether the evidence supports the claim.",
+      desc: "",
+      moto: "Because trust should be verifiable.",
       btnMethod: "See the method (P10)",
       btnAudit: "Request an audit"
     },
@@ -27,7 +28,7 @@ const translations = {
     },
     services: {
       title: "Services",
-      subtitle: "Independent audits designed to catch interpretation artifacts.",
+      subtitle: "We don't build your model — we check whether its numbers survive contact with data they haven't seen. Independent audits designed to catch interpretation artifacts.",
       s1: {
         title: "1 · Battery ML Audit",
         desc: "Independent integrity audit of an SOH/RUL model or a vendor's accuracy claim. We check split integrity (cell-level vs cycle-level), preprocessing leakage, metric honesty (full-set error, no dropped cells), and physical consistency. Deliverable: a reproducible report where every number regenerates from one script."
@@ -40,6 +41,10 @@ const translations = {
         title: "3 · Power Signal & DSP Verification",
         desc: "Verification of measured-signal pipelines (power quality, vibration, MCSA, PV) against physics and the sensor's real resolution — built on a test-covered signal-processing core."
       },
+      s4: {
+        title: "4 · Public Telemetry Audit (pre-DD screening)",
+        desc: "Independent reconstruction of public market telemetry (ERCOT SCED, AEMO NEMWEB) for a specific asset prior to due diligence: dispatch history, demonstrated vs. nameplate capacity, and SoC reconciliation where semantics allow. Deliverable: a reproducible report with a hash chain and pre-registered rules. Target audience: funds, lenders' advisors, insurers."
+      },
       deliverable: "What you receive",
       deliverableDesc: "A reproducible audit report; a plain verdict (where the claim holds, where it breaks, the corrected number); the regeneration script.",
       notGuarantee: "What we do NOT guarantee",
@@ -47,13 +52,30 @@ const translations = {
     },
     method: {
       title: "The P10 Verification Method",
-      desc: "Every finding is produced by one procedure: reduce to first principles → hunt the interpretation artifacts (leakage, inflation, curation) → compare to state of the art → deliver a reproducible verdict. The caveat is the mechanism — each correction comes from a constraint that narrows an overclaim. We apply it to our own work first.",
-      btnLink: "Read the full method →"
+      desc: "Every finding is produced by a strict procedure built on four non-negotiables. We apply it to our own work first.",
+      n1Title: "Pre-registered, frozen rules",
+      n1Desc: "Publicly timestamped before we look at the data.",
+      n2Title: "Independent evidence",
+      n2Desc: "Primary public sources, with a hash captured upon download.",
+      n3Title: "Full reproducibility",
+      n3Desc: "Open code and data, DOI-archived for persistence.",
+      n4Title: "Public failure registry",
+      n4Desc: "Our own errors are dated and listed, never deleted.",
+      btnLink: "Read the full method →",
+      btnFailures: "View public failure registry →"
     },
     proof: {
       title: "Verified work, not promises.",
       subtitle: "The standard we hold your model to, we applied to our own first. These are public, reproducible, test-covered repositories — the credential that replaces a CV.",
       flagship: "flagship",
+      marketTitle: "Market Telemetry Audits (ERCOT · NEM)",
+      marketDesc: "Three honest verdicts: verified, not verified, or not determinable from public data — the third is a finding, not a failure.",
+      cardAnoleTitle: "Anole (ERCOT, 240 MW/480 MWh)",
+      cardAnoleDesc: "60 days of SCED telemetry; F3 consistency reconciliation closed at 81.8% of major events (mean 0.98).",
+      cardBatCaveTitle: "Bat Cave (ERCOT, 100 MW/100 MWh)",
+      cardBatCaveDesc: "Primary frozen-rule verdict: 1.22% (mean 0.6339) across all 245 evaluable events; exploratory ≥10 MWh stratification: 1.71% (mean 0.7703). Both populations reported with labels. Verdict: Not determinable from public data — and that is the finding.",
+      cardAemoTitle: "AEMO NEM Fleet Dispatch Audit",
+      cardAemoDesc: "16 units evaluated; dispatch conformance, generalization gap, and FCAS auditability finding.",
       p1Title: "Battery_Health_Portfolio",
       p1Desc: "NASA PCoE + Severson/Attia, DOI-archived. Honest findings led by their limits: where early prognosis breaks, where impedance is observable vs predictive, capacity-regeneration isolated from true fade. Includes the worked example where the audit caught its own pipeline overclaiming three times. Every number regenerates from reproduce.py.",
       reposTitle: "Other verified domains",
@@ -70,7 +92,7 @@ const translations = {
     },
     about: {
       title: "Ivan Nestorov — founder",
-      desc1: "20+ years in power electronics and field electrical work, now applying that hardware intuition to independent verification of energy ML. The combination is the point: a pure data scientist doesn't know why a converter loses efficiency at high frequency; a pure hardware engineer doesn't audit a model's train/test split.",
+      desc1: "25+ years in power electronics and field electrical work, now applying that hardware intuition to independent verification of energy ML. The combination is the point: a pure data scientist doesn't know why a converter loses efficiency at high frequency; a pure hardware engineer doesn't audit a model's train/test split.",
       desc2: "VolMax stands at the intersection — between the measurement and the claim.",
       quote: "Physics doesn't lie. Sensors don't lie. Everything between is interpretation — and that's where I check."
     },
@@ -84,6 +106,7 @@ const translations = {
       details: "Independent energy-ML verification · Serbia · EU/remote engagements",
       email: "volmax.core@gmail.com",
       github: "github.com/VolMax-Studio",
+      linkedin: "linkedin.com/in/ivan-nestorov-274157371",
       inquiry: "For audit enquiries, include the model type and dataset if possible."
     }
   },
@@ -97,9 +120,10 @@ const translations = {
       contact: "Kontakt"
     },
     hero: {
-      title: "Nezavisna verifikacija battery & energy ML modela.",
-      subtitle: "Ne gradimo vaš model — proveravamo da li njegovi brojevi preživljavaju kontakt sa podacima koje nisu videli.",
-      desc: "VolMax Studio Lab je nezavisna verifikaciona praksa za battery i energy ML modele: detekcija curenja podataka, provera integriteta metrika, fizička konzistentnost. Power electronics + domenski utemeljen ML, sa svakim nalazom reproducibilnim iz izvora.",
+      title: "Učiniti javne tvrdnje nezavisno proverljivim.",
+      subtitle: "Nezavisna verifikacija energetskih i baterijskih tvrdnji — ML modeli, tehnički listovi proizvođača i javna tržišna telemetrija. Ne gradimo model i ne upravljamo sredstvom; proveravamo da li dokazi podržavaju tvrdnju.",
+      desc: "",
+      moto: "Jer bi poverenje trebalo da bude proverljivo.",
       btnMethod: "Pogledaj metod (P10)",
       btnAudit: "Zatraži audit"
     },
@@ -112,7 +136,7 @@ const translations = {
     },
     services: {
       title: "Usluge",
-      subtitle: "Nezavisni auditi dizajnirani da ulove artefakte interpretacije.",
+      subtitle: "Ne gradimo vaš model — proveravamo da li njegovi brojevi preživljavaju kontakt sa podacima koje nisu videli. Nezavisni auditi dizajnirani da ulove artefakte interpretacije.",
       s1: {
         title: "1 · Battery ML Audit",
         desc: "Nezavisni audit integriteta SOH/RUL modela ili vendorove tvrdnje o tačnosti: integritet particije (po ćeliji, ne po ciklusu), curenje u preprocessing-u, poštenje metrike (puni test set, bez izbačenih ćelija), fizička konzistentnost. Isporuka: reproducibilan izveštaj gde se svaki broj regeneriše iz skripta."
@@ -125,6 +149,10 @@ const translations = {
         title: "3 · Verifikacija power signala & DSP",
         desc: "Provera pipeline-a merenih signala (power quality, vibracije, MCSA, PV) naspram fizike i stvarne rezolucije senzora, na test-pokrivenom jezgru za procesiranje signala."
       },
+      s4: {
+        title: "4 · Audit javne telemetrije (pre-DD screening)",
+        desc: "Nezavisna rekonstrukcija javne tržišne telemetrije (ERCOT SCED, AEMO NEMWEB) za konkretno sredstvo pre due diligence-a: istorija dispatch-a, demonstrirani naspram nominalnog kapaciteta i SoC rekonsilijacija gde semantika to dozvoljava. Isporuka: reproducibilan izveštaj sa heš lancem i pre-registrovanim pravilima. Ciljna publika: fondovi, savetnici poverilaca, osiguravači."
+      },
       deliverable: "Šta isporučujemo",
       deliverableDesc: "Reproducibilan izveštaj; jasan verdikt (gde tvrdnja drži, gde puca, korigovan broj); skript za regeneraciju.",
       notGuarantee: "Šta NE garantujemo",
@@ -132,13 +160,30 @@ const translations = {
     },
     method: {
       title: "P10 Verifikacioni Metod",
-      desc: "Svaki nalaz nastaje jednom procedurom: redukcija na prve principe → lov na artefakte interpretacije (curenje, inflacija, kuracija) → poređenje sa stanjem struke → reproducibilan verdikt. Ograda je mehanizam — svaka korekcija dolazi iz ograničenja koje sužava preuveličanu tvrdnju. Primenjujemo ga prvo na sopstveni rad.",
-      btnLink: "Ceo metod →"
+      desc: "Svaki nalaz nastaje po strogoj proceduri izgrađenoj na četiri nepregovaračka stuba. Primenjujemo ga prvo na sopstveni rad.",
+      n1Title: "Pre-registrovana, zamrznuta pravila",
+      n1Desc: "Javno timestampovana pre nego što pristupimo podacima.",
+      n2Title: "Nezavisni dokazi",
+      n2Desc: "Primarni javni izvori, sa hešom zabeleženim pri preuzimanju.",
+      n3Title: "Potpuna reproducibilnost",
+      n3Desc: "Otvoreni kod i podaci, DOI-arhivirani radi trajnosti.",
+      n4Title: "Javni registar grešaka",
+      n4Desc: "Naše sopstvene greške su datirane i navedene, nikada obrisane.",
+      btnLink: "Ceo metod →",
+      btnFailures: "Pogledaj javni registar grešaka →"
     },
     proof: {
       title: "Verifikovan rad, ne obećanja.",
       subtitle: "Standard po kom proveravamo vaš model primenili smo prvo na svoj. Javni, reproducibilni, test-pokriveni repozitorijumi — kredencijal koji zamenjuje diplomu.",
       flagship: "glavni projekat",
+      marketTitle: "Auditi tržišne telemetrije (ERCOT · NEM)",
+      marketDesc: "Tri poštena verdikta: verifikovano, nije verifikovano, ili nije odredivo iz javnih podataka — treće je nalaz, a ne neuspeh.",
+      cardAnoleTitle: "Anole (ERCOT, 240 MW/480 MWh)",
+      cardAnoleDesc: "60 dana SCED telemetrije; F3 konsistentnost rekonsilijacije zatvorena na 81.8% glavnih događaja (srednja vrednost 0.98).",
+      cardBatCaveTitle: "Bat Cave (ERCOT, 100 MW/100 MWh)",
+      cardBatCaveDesc: "Primarni frozen-rule verdikt: 1.22% (srednja vrednost 0.6339) preko svih 245 evaluabilnih događaja; eksplorativna ≥10 MWh stratifikacija: 1.71% (srednja vrednost 0.7703). Obe populacije su navedene sa etiketama. Verdikt: Nije odredivo iz javnih podataka — i to je nalaz.",
+      cardAemoTitle: "AEMO NEM Fleet Dispatch Audit",
+      cardAemoDesc: "Evaluacija 16 jedinica; odstupanje u dispatch-u, jaz u generalizaciji i FCAS mogućnost audita.",
       p1Title: "Battery_Health_Portfolio",
       p1Desc: "NASA PCoE + Severson/Attia, DOI-arhiviran. Pošteni nalazi vođeni svojim granicama: gde rana prognoza puca, gde je impedansa osmotriva a gde prediktivna, regeneracija kapaciteta izolovana od pravog opadanja. Sadrži worked example gde je audit uhvatio sopstveni pipeline tri puta. Svaki broj se regeneriše iz reproduce.py.",
       reposTitle: "Ostali verifikovani domeni",
@@ -155,7 +200,7 @@ const translations = {
     },
     about: {
       title: "Ivan Nestorov — osnivač",
-      desc1: "Preko 20 godina u energetskoj elektronici i terenskom radu, sada primenjuje tu hardversku intuiciju na nezavisnu verifikaciju energy ML-a. Kombinacija je poenta: čist data scientist ne zna zašto konverter gubi efikasnost na visokoj frekvenciji; čist hardveraš ne auditira train/test particiju modela.",
+      desc1: "Preko 25 godina u energetskoj elektronici i terenskom radu, sada primenjuje tu hardversku intuiciju na nezavisnu verifikaciju energy ML-a. Kombinacija je poenta: čist data scientist ne zna zašto konverter gubi efikasnost na visokoj frekvenciji; čist hardveraš ne auditira train/test particiju modela.",
       desc2: "VolMax stoji na preseku — između merenja i tvrdnje.",
       quote: "Fizika ne laže. Senzori ne lažu. Sve između je interpretacija — i tu proveravam."
     },
@@ -169,6 +214,7 @@ const translations = {
       details: "Nezavisna energy-ML verifikacija · Srbija · EU/remote angažmani",
       email: "volmax.core@gmail.com",
       github: "github.com/VolMax-Studio",
+      linkedin: "linkedin.com/in/ivan-nestorov-274157371",
       inquiry: "Za upite za audit, navedite tip modela i skup podataka ako je moguće."
     }
   }
@@ -257,9 +303,17 @@ export default function Home() {
             {t.hero.subtitle}
           </p>
 
-          <p className="text-base md:text-lg text-zinc-500 mb-10 max-w-2xl leading-relaxed">
-            {t.hero.desc}
-          </p>
+          {t.hero.moto && (
+            <p className="text-sm md:text-base text-zinc-400 italic mb-10 max-w-2xl leading-relaxed">
+              {t.hero.moto}
+            </p>
+          )}
+
+          {t.hero.desc && (
+            <p className="text-base md:text-lg text-zinc-500 mb-10 max-w-2xl leading-relaxed">
+              {t.hero.desc}
+            </p>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
@@ -304,10 +358,10 @@ export default function Home() {
       <section id="services" className="py-24 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">{t.services.title}</h2>
-          <p className="text-zinc-400 text-lg">{t.services.subtitle}</p>
+          <p className="text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">{t.services.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Service Card 1 */}
           <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all group">
             <div>
@@ -338,6 +392,17 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4">{t.services.s3.title}</h3>
               <p className="text-zinc-400 text-sm leading-relaxed">{t.services.s3.desc}</p>
+            </div>
+          </div>
+
+          {/* Service Card 4 */}
+          <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 font-mono font-bold group-hover:bg-blue-500 group-hover:text-black transition-all">
+                04
+              </div>
+              <h3 className="text-xl font-bold mb-4">{t.services.s4.title}</h3>
+              <p className="text-zinc-400 text-sm leading-relaxed">{t.services.s4.desc}</p>
             </div>
           </div>
         </div>
@@ -372,14 +437,46 @@ export default function Home() {
           <p className="text-zinc-300 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
             {t.method.desc}
           </p>
-          <a
-            href="https://github.com/VolMax-Studio/P10-Verification-Method"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-emerald-500/30 text-emerald-400 hover:text-black hover:bg-emerald-500 hover:border-emerald-500 rounded-xl transition-all font-semibold"
-          >
-            {t.method.btnLink}
-          </a>
+
+          <div className="grid sm:grid-cols-2 gap-6 text-left mb-12 max-w-3xl mx-auto font-sans">
+            <div className="bg-[#121214] border border-zinc-800 p-6 rounded-xl">
+              <div className="font-mono text-emerald-400 text-xs mb-2">01</div>
+              <h4 className="font-bold mb-2 text-sm text-zinc-100">{t.method.n1Title}</h4>
+              <p className="text-zinc-400 text-xs leading-relaxed">{t.method.n1Desc}</p>
+            </div>
+            <div className="bg-[#121214] border border-zinc-800 p-6 rounded-xl">
+              <div className="font-mono text-emerald-400 text-xs mb-2">02</div>
+              <h4 className="font-bold mb-2 text-sm text-zinc-100">{t.method.n2Title}</h4>
+              <p className="text-zinc-400 text-xs leading-relaxed">{t.method.n2Desc}</p>
+            </div>
+            <div className="bg-[#121214] border border-zinc-800 p-6 rounded-xl">
+              <div className="font-mono text-emerald-400 text-xs mb-2">03</div>
+              <h4 className="font-bold mb-2 text-sm text-zinc-100">{t.method.n3Title}</h4>
+              <p className="text-zinc-400 text-xs leading-relaxed">{t.method.n3Desc}</p>
+            </div>
+            <div className="bg-[#121214] border border-zinc-800 p-6 rounded-xl">
+              <div className="font-mono text-emerald-400 text-xs mb-2">04</div>
+              <h4 className="font-bold mb-2 text-sm text-zinc-100">{t.method.n4Title}</h4>
+              <p className="text-zinc-400 text-xs leading-relaxed">{t.method.n4Desc}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://github.com/VolMax-Studio/P10-Verification-Method"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-emerald-500/30 text-emerald-400 hover:text-black hover:bg-emerald-500 hover:border-emerald-500 rounded-xl transition-all font-semibold"
+            >
+              {t.method.btnLink}
+            </a>
+            <a
+              href="/failures"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#121214] border border-zinc-800 text-zinc-500 hover:text-zinc-300 rounded-xl transition-all font-mono text-sm font-semibold"
+            >
+              {t.method.btnFailures}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -389,6 +486,61 @@ export default function Home() {
           <div className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-3">Verification Evidence</div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">{t.proof.title}</h2>
           <p className="text-zinc-400 text-lg max-w-3xl leading-relaxed">{t.proof.subtitle}</p>
+        </div>
+
+        {/* Market Telemetry Audits Block */}
+        <div className="mb-16">
+          <h3 className="text-xl font-bold mb-8 text-zinc-300 font-mono uppercase tracking-wider">{t.proof.marketTitle}</h3>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Card 1: Anole */}
+            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+              <div>
+                <h4 className="font-mono font-bold text-base mb-3 text-zinc-100">{t.proof.cardAnoleTitle}</h4>
+                <p className="text-zinc-400 text-xs leading-relaxed mb-6">{t.proof.cardAnoleDesc}</p>
+              </div>
+              <div className="flex flex-col gap-2 font-mono text-xs border-t border-zinc-900 pt-4 mt-auto">
+                <a href="https://github.com/VolMax-Studio/volmax-ercot-anole-audit" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                  github.com/.../volmax-ercot-anole-audit
+                </a>
+                <a href="https://doi.org/10.5281/zenodo.21304135" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+                  doi: 10.5281/zenodo.21304135
+                </a>
+              </div>
+            </div>
+
+            {/* Card 2: Bat Cave */}
+            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+              <div>
+                <h4 className="font-mono font-bold text-base mb-3 text-zinc-100">{t.proof.cardBatCaveTitle}</h4>
+                <p className="text-zinc-400 text-xs leading-relaxed mb-6">{t.proof.cardBatCaveDesc}</p>
+              </div>
+              <div className="flex flex-col gap-2 font-mono text-xs border-t border-zinc-900 pt-4 mt-auto">
+                <a href="https://github.com/VolMax-Studio/volmax-ercot-batcave-audit" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                  github.com/.../volmax-ercot-batcave-audit
+                </a>
+                <a href="https://doi.org/10.5281/zenodo.21416615" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+                  doi: 10.5281/zenodo.21416615 (v1.0.4)
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3: AEMO */}
+            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+              <div>
+                <h4 className="font-mono font-bold text-base mb-3 text-zinc-100">{t.proof.cardAemoTitle}</h4>
+                <p className="text-zinc-400 text-xs leading-relaxed mb-6">{t.proof.cardAemoDesc}</p>
+              </div>
+              <div className="flex flex-col gap-2 font-mono text-xs border-t border-zinc-900 pt-4 mt-auto">
+                <a href="https://github.com/VolMax-Studio/volmax-aemo-dispatch-audit" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                  github.com/.../volmax-aemo-dispatch-audit
+                </a>
+                <a href="https://doi.org/10.5281/zenodo.21190094" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-300">
+                  doi: 10.5281/zenodo.21190094
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="text-zinc-500 text-xs font-mono italic">{t.proof.marketDesc}</p>
         </div>
 
         {/* Flagship Card */}
@@ -490,15 +642,24 @@ export default function Home() {
           <p className="text-zinc-300">{t.contact.details}</p>
           <div className="h-px bg-zinc-800 my-4" />
           <p className="text-emerald-400 font-bold">Email: {t.contact.email}</p>
-          <p className="text-zinc-500">GitHub: {t.contact.github}</p>
+          <p className="text-zinc-500">
+            GitHub: <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 underline">{t.contact.github}</a>
+          </p>
+          <p className="text-zinc-500">
+            LinkedIn: <a href={`https://${t.contact.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 underline">{t.contact.linkedin}</a>
+          </p>
         </div>
 
         <p className="text-zinc-500 text-xs font-mono">{t.contact.inquiry}</p>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-zinc-900 text-center text-xs text-zinc-600 font-mono">
-        &copy; {new Date().getFullYear()} VolMax Studio Lab. All rights reserved.
+      <footer className="py-8 border-t border-zinc-900 text-center text-xs text-zinc-600 font-mono flex flex-col sm:flex-row justify-center items-center gap-4">
+        <span>&copy; {new Date().getFullYear()} VolMax Studio Lab. All rights reserved.</span>
+        <span className="hidden sm:inline text-zinc-800">|</span>
+        <a href="/failures" className="hover:text-zinc-400 transition-colors underline">
+          {lang === 'en' ? 'Public Failure Registry' : 'Javni registar grešaka'}
+        </a>
       </footer>
     </div>
   );

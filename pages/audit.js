@@ -536,9 +536,13 @@ export default function Audit() {
             {t.cta.btn}
           </a>
 
-          <div className="flex justify-center gap-8 mb-8 text-sm font-semibold">
+          <div className="flex justify-center flex-wrap gap-8 mb-8 text-sm font-semibold">
             <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">GitHub Profile</a>
+            <a href="https://linkedin.com/in/ivan-nestorov-274157371" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">LinkedIn</a>
             <a href="mailto:volmax.core@gmail.com" className="text-zinc-500 hover:text-zinc-100 transition-colors">Email Contact</a>
+            <a href="/failures" className="text-zinc-500 hover:text-zinc-100 transition-colors underline">
+              {lang === 'en' ? 'Failure Registry' : 'Registar grešaka'}
+            </a>
           </div>
 
           <p className="text-zinc-600 text-xs font-mono">&copy; 2026 VolMax Studio Lab. All rights reserved.</p>
