@@ -20,11 +20,11 @@ const translations = {
       {
         id: "fail-01",
         date: "2026-07-17",
-        title: "Bat Cave Pre-Registration Mismatch",
-        severity: "Low (Documentation / Metadata)",
-        status: "Resolved in v1.0.4",
-        impact: "The initial pre-registration commit (v1.0.1) in the ERCOT Bat Cave Audit repository pointed to a Zenodo DOI with outdated pilot-stage tag metadata. The reported mean dispatch conformance tag differed from the correct computed value on the frozen dataset.",
-        resolution: "All discrepancies were reconciled, the verification pipeline was re-run, and the correct metadata was frozen under tag v1.0.4. Zenodo DOI reference has been updated to 10.5281/zenodo.21416615.",
+        title: "Bat Cave: Non-Existent Number in Pre-Registration (L0 Scoping Error)",
+        severity: "Substantive (voided a pre-registered hypothesis)",
+        status: "F4 Deferred",
+        impact: "The pre-registration froze the F4 hypothesis around a 76.8 MWh telemetry threshold for April 1, 2026. That number does not exist in the raw data (actual max_soc: 102.57 MWh; soc: 73.77 MWh). The scoping error passed the L0 gate into the frozen protocol, voiding the pre-registered F4 test.",
+        resolution: "The error is documented in audits/US-TX-BATC-001/failures.md. The F4 verdict is Deferred pending official ERCOT column schemas — no post-hoc reframing was used to rescue the hypothesis. The rules stayed frozen; the mistake stays visible.",
         links: [
           { label: "Bat Cave Repo", url: "https://github.com/VolMax-Studio/volmax-ercot-batcave-audit" },
           { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21416615" }
@@ -54,11 +54,11 @@ const translations = {
       {
         id: "fail-01",
         date: "17. jul 2026.",
-        title: "Bat Cave pre-registraciono odstupanje",
-        severity: "Niska (Dokumentacija / Metapodaci)",
-        status: "Rešeno u v1.0.4",
-        impact: "Inicijalni pre-registracioni commit (v1.0.1) u ERCOT Bat Cave Audit repozitorijumu je ukazivao na Zenodo DOI sa zastarelim metapodacima iz pilot faze. Prijavljena srednja vrednost usklađenosti dispatch-a razlikovala se od tačne izračunate vrednosti na zamrznutom skupu podataka.",
-        resolution: "Sva odstupanja su usaglašena, pipeline za verifikaciju je ponovo pokrenut, i ispravni metapodaci su zamrznuti pod tagom v1.0.4. Zenodo DOI referenca je ažurirana na 10.5281/zenodo.21416615.",
+        title: "Bat Cave: Nepostojeći broj u pre-registraciji (L0 scoping greška)",
+        severity: "Suštinska (poništena pre-registrovana hipoteza)",
+        status: "F4 Odloženo",
+        impact: "Pre-registracija je zamrzla F4 hipotezu oko praga telemetrije od 76.8 MWh za 1. april 2026. Taj broj ne postoji u sirovim podacima (stvarni max_soc: 102.57 MWh; soc: 73.77 MWh). Scoping greška je prošla L0 kapiju u zamrznuti protokol, poništavajući pre-registrovani F4 test.",
+        resolution: "Greška je dokumentovana u audits/US-TX-BATC-001/failures.md. F4 verdikt je Odložen (Deferred) do dobijanja zvaničnih ERCOT shema kolona — nikakvo post-hoc reframiranje nije korišćeno za spašavanje hipoteze. Pravila su ostala zamrznuta; greška ostaje vidljiva.",
         links: [
           { label: "Bat Cave repozitorijum", url: "https://github.com/VolMax-Studio/volmax-ercot-batcave-audit" },
           { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21416615" }
