@@ -82,6 +82,19 @@ export default function Failures() {
         <title>{`${t.hero.title} — VolMax Studio Lab`}</title>
         <meta name="description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / LinkedIn Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.volmax-studio.rs/failures" />
+        <meta property="og:title" content="Public Failure Registry — VolMax Studio Lab" />
+        <meta property="og:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
+        <meta property="og:site_name" content="VolMax Studio Lab" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Public Failure Registry — VolMax Studio Lab" />
+        <meta name="twitter:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
       </Head>
 
       {/* Decorative Blur Overlays */}

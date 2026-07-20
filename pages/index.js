@@ -228,9 +228,21 @@ export default function Home() {
     <div className="min-h-screen bg-[#080808] text-zinc-100 font-sans selection:bg-emerald-500 selection:text-black">
       <Head>
         <title>VolMax Studio Lab — Independent Energy ML Verification</title>
-        <meta name="description" content="Independent integrity audits, leakage detection, and physical-consistency checks for battery and energy-system ML models." />
+        <meta name="description" content="Independent verification for energy & battery claims — ML models, vendor datasheets, and public market telemetry. Because trust should be verifiable." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / LinkedIn Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.volmax-studio.rs/" />
+        <meta property="og:title" content="VolMax Studio Lab — Independent Energy ML Verification" />
+        <meta property="og:description" content="Independent verification for energy & battery claims — ML models, vendor datasheets, and public market telemetry. Because trust should be verifiable." />
+        <meta property="og:site_name" content="VolMax Studio Lab" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="VolMax Studio Lab — Independent Energy ML Verification" />
+        <meta name="twitter:description" content="Independent verification for energy & battery claims — ML models, vendor datasheets, and public market telemetry. Because trust should be verifiable." />
       </Head>
 
       {/* Decorative Blur Overlays */}

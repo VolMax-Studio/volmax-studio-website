@@ -228,6 +228,19 @@ export default function Audit() {
         <title>Battery ML Audit — Independent SOH & RUL Verification</title>
         <meta name="description" content="Independent verification of battery SOH & RUL models against physical law and raw held-out data." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / LinkedIn Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.volmax-studio.rs/audit" />
+        <meta property="og:title" content="Battery ML Audit — Independent SOH & RUL Verification" />
+        <meta property="og:description" content="Independent verification of battery SOH & RUL models against physical law and raw held-out data." />
+        <meta property="og:site_name" content="VolMax Studio Lab" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Battery ML Audit — Independent SOH & RUL Verification" />
+        <meta name="twitter:description" content="Independent verification of battery SOH & RUL models against physical law and raw held-out data." />
       </Head>
 
       {/* Decorative Blur Overlays */}
