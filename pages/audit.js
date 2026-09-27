@@ -6,8 +6,8 @@ const translations = {
     nav: {
       home: "Home",
       services: "Services",
-      method: "Method (P10)",
-      proof: "Proof",
+      method: "P10",
+      proof: "Evidence",
       about: "About",
       contact: "Contact"
     },
@@ -18,7 +18,7 @@ const translations = {
     },
     problem: {
       title: "The Problem This Solves",
-      desc1: "The party that builds a battery SOH/RUL model usually also reports its accuracy. That is a structural conflict of interest — and it is why \"98% accuracy\" claims so often collapse on a cell the model has never seen. You have to trust a vendor's number, but you have no neutral way to check it.",
+      desc1: "The party that builds a battery SOH/RUL model usually also reports its accuracy. That is a structural conflict of interest — and it is a reason strong reported metrics can fail to transfer when evaluation allows leakage, correlated train/test samples, or benchmark-specific tuning. You have to trust a vendor's number, but you have no neutral way to check it.",
       desc2: "This audit is the neutral check. I did not build your model, I am not selling you a competing one, and I have no incentive to flatter the result. The only product is an honest verdict on whether the claim survives contact with data it has never seen."
     },
     checks: {
@@ -105,7 +105,7 @@ const translations = {
     },
     cta: {
       title: "Ready for a Neutral Check?",
-      subtitle: "Physics doesn't lie. Sensors don't lie. The audit stands at the gap between the measurement and the claim, and checks the rest.",
+      subtitle: "A measurement is not a conclusion. The audit stands at the gap between the measurement and the claim, and checks the rest.",
       btn: "Book a Battery ML Audit"
     }
   },
@@ -113,7 +113,7 @@ const translations = {
     nav: {
       home: "Početna",
       services: "Usluge",
-      method: "Metod (P10)",
+      method: "P10",
       proof: "Dokazi",
       about: "O nama",
       contact: "Kontakt"
@@ -125,7 +125,7 @@ const translations = {
     },
     problem: {
       title: "Problem koji rešavamo",
-      desc1: "Strana koja razvija battery SOH/RUL model obično sama izveštava o njegovoj tačnosti. To predstavlja strukturni konflikt interesa — i razlog je zašto tvrdnje o „98% tačnosti\" propadaju na ćelijama koje model nikada ranije nije video. Prinuđeni ste da verujete brojevima vendora, a nemate neutralan način da ih proverite.",
+      desc1: "Strana koja razvija battery SOH/RUL model obično sama izveštava o njegovoj tačnosti. To predstavlja strukturni konflikt interesa — i razlog je zašto snažno prijavljene metrike mogu da ne prežive prenos kada evaluacija dozvoljava curenje podataka, korelisane trening/test uzorke ili podešavanje specifično za benchmark. Prinuđeni ste da verujete brojevima vendora, a nemate neutralan način da ih proverite.",
       desc2: "Ovaj audit je neutralna provera. Nisam razvio vaš model, ne prodajem konkurentski model i nemam interes da ulepšavam rezultate. Jedini proizvod je pošten verdikt o tome da li tvrdnja preživljava kontakt sa novim podacima."
     },
     checks: {
@@ -212,7 +212,7 @@ const translations = {
     },
     cta: {
       title: "Spremni za neutralnu proveru?",
-      subtitle: "Fizika ne laže. Senzori ne laže. Audit stoji na preseku između merenja i tvrdnje, i proverava ostatak.",
+      subtitle: "Merenje nije zaključak. Audit stoji na preseku između merenja i tvrdnje, i proverava ostatak.",
       btn: "Zakaži Battery ML Audit"
     }
   }
@@ -223,12 +223,12 @@ export default function Audit() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen bg-[#080808] text-zinc-100 font-sans selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-teal-200 selection:text-slate-900">
       <Head>
         <title>Battery ML Audit — Independent SOH & RUL Verification</title>
         <meta name="description" content="Independent verification of battery SOH & RUL models against physical law and raw held-out data." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo-minimal.jpg" />
 
         {/* Open Graph / LinkedIn Meta Tags */}
         <meta property="og:type" content="website" />
@@ -243,35 +243,30 @@ export default function Audit() {
         <meta name="twitter:description" content="Independent verification of battery SOH & RUL models against physical law and raw held-out data." />
       </Head>
 
-      {/* Decorative Blur Overlays */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
-
       {/* Navigation */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#080808]/85 border-b border-zinc-900">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 font-mono font-bold text-lg tracking-tight">
-            <span className="text-emerald-500">&lt;</span>
+          <a href="/" className="flex items-center gap-2.5 font-bold text-lg tracking-tight text-slate-900">
+            <img src="/logo-3d-light.png" alt="" className="w-8 h-8 rounded-md object-cover" />
             <span>VolMax</span>
-            <span className="text-zinc-500">StudioLab</span>
-            <span className="text-emerald-500">/&gt;</span>
+            <span className="text-slate-400 font-medium hidden sm:inline">Studio Lab</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-            <a href="/" className="hover:text-zinc-100 transition-colors">{t.nav.home}</a>
-            <a href="/audit" className="text-zinc-100 transition-colors">{t.hero.title}</a>
-            <a href="/#proof" className="hover:text-zinc-100 transition-colors">{t.nav.proof}</a>
-            <a href="/#about" className="hover:text-zinc-100 transition-colors">{t.nav.about}</a>
-            <a href="/#contact" className="hover:text-zinc-100 transition-colors">{t.nav.contact}</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
+            <a href="/" className="hover:text-slate-900 transition-colors">{t.nav.home}</a>
+            <a href="/audit" className="text-slate-900 transition-colors">{t.hero.title}</a>
+            <a href="/#evidence" className="hover:text-slate-900 transition-colors">{t.nav.proof}</a>
+            <a href="/#about" className="hover:text-slate-900 transition-colors">{t.nav.about}</a>
+            <a href="/#contact" className="hover:text-slate-900 transition-colors">{t.nav.contact}</a>
           </nav>
 
           <div className="flex items-center gap-4">
             {/* Language Selector */}
-            <div className="bg-[#121214] border border-zinc-800 rounded-lg p-0.5 flex">
+            <div className="bg-slate-100 border border-slate-200 rounded-lg p-0.5 flex">
               <button
                 onClick={() => setLang('en')}
                 className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${
-                  lang === 'en' ? 'bg-emerald-500 text-black shadow-md shadow-emerald-500/10' : 'text-zinc-400 hover:text-zinc-100'
+                  lang === 'en' ? 'bg-teal-700 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 EN
@@ -279,7 +274,7 @@ export default function Audit() {
               <button
                 onClick={() => setLang('sr')}
                 className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${
-                  lang === 'sr' ? 'bg-emerald-500 text-black shadow-md shadow-emerald-500/10' : 'text-zinc-400 hover:text-zinc-100'
+                  lang === 'sr' ? 'bg-teal-700 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 SR
@@ -288,7 +283,7 @@ export default function Audit() {
 
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide uppercase bg-zinc-100 text-black rounded-lg hover:bg-zinc-200 transition-colors"
+              className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide uppercase bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition-colors"
             >
               {t.cta.btn}
             </a>
@@ -298,155 +293,71 @@ export default function Audit() {
 
       {/* Main Content Container */}
       <div className="max-w-4xl mx-auto px-6 py-20">
-        
+
         {/* Header Section */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-gradient">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
             {t.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-300 font-medium mb-6 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-slate-700 font-medium mb-6 leading-relaxed max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
-          <p className="text-base md:text-lg text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
             {t.hero.desc}
           </p>
         </header>
 
         {/* Problem Box */}
-        <section className="bg-gradient-to-br from-[#121214] to-[#0c0c0e] border border-zinc-800 rounded-3xl p-8 md:p-12 mb-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
-          <h2 className="text-2xl font-bold text-emerald-400 mb-6">{t.problem.title}</h2>
-          <p className="text-zinc-300 mb-4 text-base md:text-lg leading-relaxed">{t.problem.desc1}</p>
-          <p className="text-zinc-400 leading-relaxed text-sm md:text-base">{t.problem.desc2}</p>
+        <section className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 mb-16 relative overflow-hidden">
+          <h2 className="text-2xl font-bold text-teal-700 mb-6">{t.problem.title}</h2>
+          <p className="text-slate-700 mb-4 text-base md:text-lg leading-relaxed">{t.problem.desc1}</p>
+          <p className="text-slate-500 leading-relaxed text-sm md:text-base">{t.problem.desc2}</p>
         </section>
 
         {/* Seven Checks Section */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">{t.checks.title}</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center text-slate-900">{t.checks.title}</h2>
           <div className="space-y-6">
-            
-            {/* Check 1 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                01
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c1.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c1.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c1.output}
-                </div>
-              </div>
-            </div>
 
-            {/* Check 2 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                02
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c2.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c2.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c2.output}
+            {[t.checks.c1, t.checks.c2, t.checks.c3, t.checks.c4, t.checks.c5, t.checks.c6, t.checks.c7].map((c, idx) => (
+              <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-slate-300 transition-all">
+                <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center text-teal-700 font-mono font-bold shrink-0">
+                  {String(idx + 1).padStart(2, '0')}
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900">{c.title}</h3>
+                  <p className="text-slate-500 text-sm md:text-base leading-relaxed">{c.desc}</p>
+                  <div className="font-mono text-xs text-teal-700 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 inline-block">
+                    {c.output}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Check 3 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                03
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c3.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c3.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c3.output}
-                </div>
-              </div>
-            </div>
-
-            {/* Check 4 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                04
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c4.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c4.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c4.output}
-                </div>
-              </div>
-            </div>
-
-            {/* Check 5 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                05
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c5.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c5.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c5.output}
-                </div>
-              </div>
-            </div>
-
-            {/* Check 6 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                06
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c6.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c6.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c6.output}
-                </div>
-              </div>
-            </div>
-
-            {/* Check 7 */}
-            <div className="bg-[#121214] border border-zinc-800/80 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-zinc-700 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-mono font-bold shrink-0">
-                07
-              </div>
-              <div className="space-y-3">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-100">{t.checks.c7.title}</h3>
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">{t.checks.c7.desc}</p>
-                <div className="font-mono text-xs text-emerald-400 bg-[#080808]/60 px-3 py-1.5 rounded-lg border border-zinc-800 inline-block">
-                  {t.checks.c7.output}
-                </div>
-              </div>
-            </div>
+            ))}
 
           </div>
         </section>
 
         {/* Verdict Box */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">{t.verdicts.title}</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-12 text-center text-slate-900">{t.verdicts.title}</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            
+
             {/* Verdict 1 */}
-            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-teal-500">
-              <h3 className="text-lg font-extrabold uppercase text-teal-400 mb-3">{t.verdicts.v1.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{t.verdicts.v1.desc}</p>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 border-t-4 border-t-teal-600">
+              <h3 className="text-lg font-extrabold uppercase text-teal-700 mb-3">{t.verdicts.v1.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{t.verdicts.v1.desc}</p>
             </div>
 
             {/* Verdict 2 */}
-            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-amber-500">
-              <h3 className="text-lg font-extrabold uppercase text-amber-500 mb-3">{t.verdicts.v2.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{t.verdicts.v2.desc}</p>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 border-t-4 border-t-amber-500">
+              <h3 className="text-lg font-extrabold uppercase text-amber-600 mb-3">{t.verdicts.v2.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{t.verdicts.v2.desc}</p>
             </div>
 
             {/* Verdict 3 */}
-            <div className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 border-t-4 border-t-purple-500">
-              <h3 className="text-lg font-extrabold uppercase text-purple-400 mb-3">{t.verdicts.v3.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{t.verdicts.v3.desc}</p>
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 border-t-4 border-t-purple-500">
+              <h3 className="text-lg font-extrabold uppercase text-purple-700 mb-3">{t.verdicts.v3.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{t.verdicts.v3.desc}</p>
             </div>
 
           </div>
@@ -454,34 +365,34 @@ export default function Audit() {
 
         {/* Guarantees Box */}
         <section className="grid md:grid-cols-2 gap-8 mb-20">
-          <div className="bg-[#0c0c0e] border border-zinc-900 rounded-2xl p-8">
-            <h3 className="flex items-center gap-2 text-emerald-400 font-bold mb-6">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+            <h3 className="flex items-center gap-2 text-teal-700 font-bold mb-6">
+              <span className="w-2 h-2 rounded-full bg-teal-600" />
               {t.guarantees.title}
             </h3>
-            <ul className="space-y-4 text-zinc-300 text-sm leading-relaxed list-none">
-              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-emerald-400 before:font-bold">
+            <ul className="space-y-4 text-slate-700 text-sm leading-relaxed list-none">
+              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-teal-600 before:font-bold">
                 {t.guarantees.g1}
               </li>
-              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-emerald-400 before:font-bold">
+              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-teal-600 before:font-bold">
                 {t.guarantees.g2}
               </li>
-              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-emerald-400 before:font-bold">
+              <li className="relative pl-6 before:content-['✓'] before:absolute before:left-0 before:text-teal-600 before:font-bold">
                 {t.guarantees.g3}
               </li>
             </ul>
           </div>
 
-          <div className="bg-[#0c0c0e] border border-zinc-900 rounded-2xl p-8">
-            <h3 className="flex items-center gap-2 text-zinc-500 font-bold mb-6">
-              <span className="w-2 h-2 rounded-full bg-zinc-500" />
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+            <h3 className="flex items-center gap-2 text-slate-500 font-bold mb-6">
+              <span className="w-2 h-2 rounded-full bg-slate-400" />
               {t.guarantees.notTitle}
             </h3>
-            <ul className="space-y-4 text-zinc-400 text-sm leading-relaxed list-none">
-              <li className="relative pl-6 before:content-['✕'] before:absolute before:left-0 before:text-zinc-600 before:font-bold">
+            <ul className="space-y-4 text-slate-500 text-sm leading-relaxed list-none">
+              <li className="relative pl-6 before:content-['✕'] before:absolute before:left-0 before:text-slate-400 before:font-bold">
                 {t.guarantees.ng1}
               </li>
-              <li className="relative pl-6 before:content-['✕'] before:absolute before:left-0 before:text-zinc-600 before:font-bold">
+              <li className="relative pl-6 before:content-['✕'] before:absolute before:left-0 before:text-slate-400 before:font-bold">
                 {t.guarantees.ng2}
               </li>
             </ul>
@@ -489,38 +400,38 @@ export default function Audit() {
         </section>
 
         {/* Credentials Section */}
-        <section className="bg-[#121214] border border-zinc-800 rounded-2xl p-8 md:p-10 mb-20">
-          <h2 className="text-2xl font-bold mb-4">{t.credentials.title}</h2>
-          <p className="text-zinc-400 text-base mb-8 leading-relaxed">{t.credentials.desc}</p>
-          
+        <section className="bg-white border border-slate-200 rounded-2xl p-8 md:p-10 mb-20">
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">{t.credentials.title}</h2>
+          <p className="text-slate-500 text-base mb-8 leading-relaxed">{t.credentials.desc}</p>
+
           <div className="space-y-4">
-            
-            <a href="https://github.com/VolMax-Studio/ekf-dynamic-sampling-audit" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-[#080808]/80 border border-zinc-800 rounded-xl hover:border-emerald-500/40 hover:bg-[#0c0c0e] transition-all">
+
+            <a href="https://github.com/VolMax-Studio/ekf-dynamic-sampling-audit" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl hover:border-teal-300 hover:bg-white transition-all">
               <div>
-                <h4 className="font-bold text-zinc-100 mb-1">{t.credentials.p1.title}</h4>
-                <p className="text-xs text-zinc-400 leading-relaxed max-w-xl">{t.credentials.p1.desc}</p>
+                <h4 className="font-bold text-slate-900 mb-1">{t.credentials.p1.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed max-w-xl">{t.credentials.p1.desc}</p>
               </div>
-              <span className="font-mono text-xs px-2.5 py-1 bg-emerald-950/20 text-emerald-400 border border-emerald-900/30 rounded-md shrink-0 self-start md:self-auto">
+              <span className="font-mono text-xs px-2.5 py-1 bg-teal-50 text-teal-700 border border-teal-200 rounded-md shrink-0 self-start md:self-auto">
                 DOI 10.5281/zenodo.21009974
               </span>
             </a>
 
-            <a href="https://github.com/VolMax-Studio/VolMax_HALO_Optimizer" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-[#080808]/80 border border-zinc-800 rounded-xl hover:border-emerald-500/40 hover:bg-[#0c0c0e] transition-all">
+            <a href="https://github.com/VolMax-Studio/VolMax_HALO_Optimizer" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl hover:border-teal-300 hover:bg-white transition-all">
               <div>
-                <h4 className="font-bold text-zinc-100 mb-1">{t.credentials.p2.title}</h4>
-                <p className="text-xs text-zinc-400 leading-relaxed max-w-xl">{t.credentials.p2.desc}</p>
+                <h4 className="font-bold text-slate-900 mb-1">{t.credentials.p2.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed max-w-xl">{t.credentials.p2.desc}</p>
               </div>
-              <span className="font-mono text-xs px-2.5 py-1 bg-emerald-950/20 text-emerald-400 border border-emerald-900/30 rounded-md shrink-0 self-start md:self-auto">
+              <span className="font-mono text-xs px-2.5 py-1 bg-teal-50 text-teal-700 border border-teal-200 rounded-md shrink-0 self-start md:self-auto">
                 DOI 10.5281/zenodo.21010289
               </span>
             </a>
 
-            <a href="https://github.com/VolMax-Studio/Battery_Health_Portfolio" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-[#080808]/80 border border-zinc-800 rounded-xl hover:border-emerald-500/40 hover:bg-[#0c0c0e] transition-all">
+            <a href="https://github.com/VolMax-Studio/Battery_Health_Portfolio" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-xl hover:border-teal-300 hover:bg-white transition-all">
               <div>
-                <h4 className="font-bold text-zinc-100 mb-1">{t.credentials.p3.title}</h4>
-                <p className="text-xs text-zinc-400 leading-relaxed max-w-xl">{t.credentials.p3.desc}</p>
+                <h4 className="font-bold text-slate-900 mb-1">{t.credentials.p3.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed max-w-xl">{t.credentials.p3.desc}</p>
               </div>
-              <span className="font-mono text-xs px-2.5 py-1 bg-emerald-950/20 text-emerald-400 border border-emerald-900/30 rounded-md shrink-0 self-start md:self-auto">
+              <span className="font-mono text-xs px-2.5 py-1 bg-teal-50 text-teal-700 border border-teal-200 rounded-md shrink-0 self-start md:self-auto">
                 DOI 10.5281/zenodo.20752869
               </span>
             </a>
@@ -529,36 +440,36 @@ export default function Audit() {
         </section>
 
         {/* Audience Box */}
-        <section className="bg-gradient-to-br from-[#121214] to-[#0c0c0e] border border-zinc-800 rounded-3xl p-8 md:p-10 mb-20 text-center relative overflow-hidden">
-          <h2 className="text-2xl font-bold mb-4">{t.audience.title}</h2>
-          <p className="text-zinc-300 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">{t.audience.desc}</p>
+        <section className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-10 mb-20 text-center relative overflow-hidden">
+          <h2 className="text-2xl font-bold mb-4 text-slate-900">{t.audience.title}</h2>
+          <p className="text-slate-700 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">{t.audience.desc}</p>
         </section>
 
       </div>
 
       {/* Footer / Contact */}
-      <footer id="contact" className="py-24 border-t border-zinc-900 bg-[#0c0c0e]/50 text-center px-6">
+      <footer id="contact" className="py-24 border-t border-slate-200 bg-slate-50 text-center px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{t.cta.title}</h2>
-          <p className="text-zinc-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">{t.cta.subtitle}</p>
-          
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-slate-900">{t.cta.title}</h2>
+          <p className="text-slate-500 text-base md:text-lg mb-10 max-w-2xl mx-auto">{t.cta.subtitle}</p>
+
           <a
             href="mailto:volmax.core@gmail.com?subject=Battery%20ML%20Audit%20Inquiry"
-            className="inline-flex items-center justify-center px-8 py-4 bg-emerald-500 text-black font-bold rounded-full hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/15 mb-12 text-sm uppercase tracking-wide"
+            className="inline-flex items-center justify-center px-8 py-4 bg-teal-700 text-white font-bold rounded-full hover:bg-teal-600 transition-all shadow-lg shadow-teal-700/15 mb-12 text-sm uppercase tracking-wide"
           >
             {t.cta.btn}
           </a>
 
           <div className="flex justify-center flex-wrap gap-8 mb-8 text-sm font-semibold">
-            <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">GitHub Profile</a>
-            <a href="https://linkedin.com/in/ivan-nestorov-274157371" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">LinkedIn</a>
-            <a href="mailto:volmax.core@gmail.com" className="text-zinc-500 hover:text-zinc-100 transition-colors">Email Contact</a>
-            <a href="/failures" className="text-zinc-500 hover:text-zinc-100 transition-colors underline">
+            <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors">GitHub Profile</a>
+            <a href="https://linkedin.com/in/ivan-nestorov-274157371" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors">LinkedIn</a>
+            <a href="mailto:volmax.core@gmail.com" className="text-slate-500 hover:text-slate-900 transition-colors">Email Contact</a>
+            <a href="/failures" className="text-slate-500 hover:text-slate-900 transition-colors underline">
               {lang === 'en' ? 'Failure Registry' : 'Registar grešaka'}
             </a>
           </div>
 
-          <p className="text-zinc-600 text-xs font-mono">&copy; 2026 VolMax Studio Lab. All rights reserved.</p>
+          <p className="text-slate-400 text-xs font-mono">&copy; {new Date().getFullYear()} VolMax Studio Lab. All rights reserved.</p>
         </div>
       </footer>
     </div>
