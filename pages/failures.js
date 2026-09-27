@@ -6,8 +6,8 @@ const translations = {
     nav: {
       home: "Home",
       services: "Services",
-      method: "Method (P10)",
-      proof: "Proof",
+      method: "P10",
+      proof: "Evidence",
       about: "About",
       contact: "Contact"
     },
@@ -27,7 +27,7 @@ const translations = {
         resolution: "The error is documented in audits/US-TX-BATC-001/failures.md. The F4 verdict is Deferred pending official ERCOT column schemas — no post-hoc reframing was used to rescue the hypothesis. The rules stayed frozen; the mistake stays visible.",
         links: [
           { label: "Bat Cave Repo", url: "https://github.com/VolMax-Studio/volmax-ercot-batcave-audit" },
-          { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21416615" }
+          { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21401795" }
         ]
       }
     ],
@@ -40,7 +40,7 @@ const translations = {
     nav: {
       home: "Početna",
       services: "Usluge",
-      method: "Metod (P10)",
+      method: "P10",
       proof: "Dokazi",
       about: "O nama",
       contact: "Kontakt"
@@ -61,7 +61,7 @@ const translations = {
         resolution: "Greška je dokumentovana u audits/US-TX-BATC-001/failures.md. F4 verdikt je Odložen (Deferred) do dobijanja zvaničnih ERCOT shema kolona — nikakvo post-hoc reframiranje nije korišćeno za spašavanje hipoteze. Pravila su ostala zamrznuta; greška ostaje vidljiva.",
         links: [
           { label: "Bat Cave repozitorijum", url: "https://github.com/VolMax-Studio/volmax-ercot-batcave-audit" },
-          { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21416615" }
+          { label: "Zenodo DOI", url: "https://doi.org/10.5281/zenodo.21401795" }
         ]
       }
     ],
@@ -77,56 +77,51 @@ export default function Failures() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen bg-[#080808] text-zinc-100 font-sans selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-teal-200 selection:text-slate-900">
       <Head>
         <title>{`${t.hero.title} — VolMax Studio Lab`}</title>
-        <meta name="description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
+        <meta name="description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our verification audits." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo-minimal.jpg" />
 
         {/* Open Graph / LinkedIn Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.volmax-studio.rs/failures" />
         <meta property="og:title" content="Public Failure Registry — VolMax Studio Lab" />
-        <meta property="og:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
+        <meta property="og:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our verification audits." />
         <meta property="og:site_name" content="VolMax Studio Lab" />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Public Failure Registry — VolMax Studio Lab" />
-        <meta name="twitter:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our energy-ML verification audits." />
+        <meta name="twitter:description" content="Public failure registry documenting mistakes, corrections, and resolved discrepancies in our verification audits." />
       </Head>
 
-      {/* Decorative Blur Overlays */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[140px] pointer-events-none" />
-
       {/* Navigation */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#080808]/85 border-b border-zinc-900">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 font-mono font-bold text-lg tracking-tight">
-            <span className="text-emerald-500">&lt;</span>
+          <a href="/" className="flex items-center gap-2.5 font-bold text-lg tracking-tight text-slate-900">
+            <img src="/logo-3d-light.png" alt="" className="w-8 h-8 rounded-md object-cover" />
             <span>VolMax</span>
-            <span className="text-zinc-500">StudioLab</span>
-            <span className="text-emerald-500">/&gt;</span>
+            <span className="text-slate-400 font-medium hidden sm:inline">Studio Lab</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-            <a href="/" className="hover:text-zinc-100 transition-colors">{t.nav.home}</a>
-            <a href="/audit" className="hover:text-zinc-100 transition-colors">{t.nav.services}</a>
-            <a href="/#method" className="hover:text-zinc-100 transition-colors">{t.nav.method}</a>
-            <a href="/#proof" className="hover:text-zinc-100 transition-colors">{t.nav.proof}</a>
-            <a href="/#about" className="hover:text-zinc-100 transition-colors">{t.nav.about}</a>
-            <a href="/#contact" className="hover:text-zinc-100 transition-colors">{t.nav.contact}</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
+            <a href="/" className="hover:text-slate-900 transition-colors">{t.nav.home}</a>
+            <a href="/audit" className="hover:text-slate-900 transition-colors">{t.nav.services}</a>
+            <a href="/#method" className="hover:text-slate-900 transition-colors">{t.nav.method}</a>
+            <a href="/#evidence" className="hover:text-slate-900 transition-colors">{t.nav.proof}</a>
+            <a href="/#about" className="hover:text-slate-900 transition-colors">{t.nav.about}</a>
+            <a href="/#contact" className="hover:text-slate-900 transition-colors">{t.nav.contact}</a>
           </nav>
 
           <div className="flex items-center gap-4">
             {/* Language Selector */}
-            <div className="bg-[#121214] border border-zinc-800 rounded-lg p-0.5 flex">
+            <div className="bg-slate-100 border border-slate-200 rounded-lg p-0.5 flex">
               <button
                 onClick={() => setLang('en')}
                 className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${
-                  lang === 'en' ? 'bg-emerald-500 text-black shadow-md shadow-emerald-500/10' : 'text-zinc-400 hover:text-zinc-100'
+                  lang === 'en' ? 'bg-teal-700 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 EN
@@ -134,7 +129,7 @@ export default function Failures() {
               <button
                 onClick={() => setLang('sr')}
                 className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${
-                  lang === 'sr' ? 'bg-emerald-500 text-black shadow-md shadow-emerald-500/10' : 'text-zinc-400 hover:text-zinc-100'
+                  lang === 'sr' ? 'bg-teal-700 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 SR
@@ -147,20 +142,20 @@ export default function Failures() {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-20">
         <header className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/20 border border-red-500/20 text-red-400 text-xs font-semibold mb-6 font-mono">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-semibold mb-6 font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
             DO NOT ERASE · DATE EVERY ERROR
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-gradient bg-gradient-to-r from-zinc-100 via-zinc-300 to-red-400">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
             {t.hero.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-zinc-300 font-medium mb-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-700 font-medium mb-6 max-w-3xl mx-auto leading-relaxed">
             {t.hero.subtitle}
           </p>
 
-          <p className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
             {t.hero.desc}
           </p>
         </header>
@@ -168,41 +163,41 @@ export default function Failures() {
         {/* Failures List */}
         <section className="space-y-8 mb-24">
           {t.failures.map((fail) => (
-            <div key={fail.id} className="bg-[#121214] border border-zinc-800 rounded-2xl p-6 md:p-8 hover:border-zinc-700 transition-all relative overflow-hidden">
-              <div className="absolute top-0 right-0 px-4 py-1.5 bg-red-950/40 border-l border-b border-zinc-800 text-red-400 text-xs font-mono font-bold">
+            <div key={fail.id} className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 hover:border-slate-300 transition-all relative overflow-hidden">
+              <div className="absolute top-0 right-0 px-4 py-1.5 bg-red-50 border-l border-b border-slate-200 text-red-700 text-xs font-mono font-bold">
                 {fail.status}
               </div>
 
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
-                <span className="text-xs font-mono text-zinc-500 bg-[#080808] px-2.5 py-1 rounded border border-zinc-900">
+                <span className="text-xs font-mono text-slate-500 bg-slate-50 px-2.5 py-1 rounded border border-slate-200">
                   {fail.date}
                 </span>
-                <span className="text-xs font-mono text-zinc-400">
-                  Severity: <span className="text-red-400/90">{fail.severity}</span>
+                <span className="text-xs font-mono text-slate-500">
+                  Severity: <span className="text-red-700/90">{fail.severity}</span>
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-zinc-100 mb-4">{fail.title}</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{fail.title}</h3>
 
               <div className="space-y-4 mb-6">
                 <div>
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-1">Impact</h4>
-                  <p className="text-zinc-300 text-sm leading-relaxed">{fail.impact}</p>
+                  <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Impact</h4>
+                  <p className="text-slate-700 text-sm leading-relaxed">{fail.impact}</p>
                 </div>
                 <div>
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-1">Resolution</h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{fail.resolution}</p>
+                  <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Resolution</h4>
+                  <p className="text-slate-500 text-sm leading-relaxed">{fail.resolution}</p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4 pt-4 border-t border-zinc-900 font-mono text-xs">
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100 font-mono text-xs">
                 {fail.links.map((link, idx) => (
                   <a
                     key={idx}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-400 hover:underline hover:text-emerald-300 transition-colors"
+                    className="text-teal-700 hover:underline hover:text-teal-600 transition-colors"
                   >
                     {link.label} →
                   </a>
@@ -214,18 +209,18 @@ export default function Failures() {
       </div>
 
       {/* Footer */}
-      <footer className="py-24 border-t border-zinc-900 bg-[#0c0c0e]/50 text-center px-6">
+      <footer className="py-24 border-t border-slate-200 bg-slate-50 text-center px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold tracking-tight mb-4">{t.footer.tagline}</h2>
-          <p className="text-zinc-500 text-sm mb-10">volmax.core@gmail.com</p>
+          <h2 className="text-2xl font-bold tracking-tight mb-4 text-slate-900">{t.footer.tagline}</h2>
+          <p className="text-slate-500 text-sm mb-10">volmax.core@gmail.com</p>
 
           <div className="flex justify-center flex-wrap gap-8 mb-8 text-sm font-semibold">
-            <a href="/" className="text-emerald-400 hover:text-emerald-300 transition-colors underline">{t.footer.backLink}</a>
-            <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">GitHub</a>
-            <a href="https://linkedin.com/in/ivan-nestorov-274157371" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">LinkedIn</a>
+            <a href="/" className="text-teal-700 hover:text-teal-600 transition-colors underline">{t.footer.backLink}</a>
+            <a href="https://github.com/VolMax-Studio" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/ivan-nestorov-274157371" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-slate-900 transition-colors">LinkedIn</a>
           </div>
 
-          <p className="text-zinc-600 text-xs font-mono">&copy; 2026 VolMax Studio Lab. All rights reserved.</p>
+          <p className="text-slate-400 text-xs font-mono">&copy; {new Date().getFullYear()} VolMax Studio Lab. All rights reserved.</p>
         </div>
       </footer>
     </div>
