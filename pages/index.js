@@ -841,7 +841,7 @@ export default function Home() {
               <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-600 to-slate-700 flex items-center justify-center shrink-0 shadow-md">
                 <span className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold font-mono z-0">IN</span>
                 <img
-                  src="/ivan-nestorov.jpg"
+                  src="/ivan-nestorov.png"
                   alt="Ivan Nestorov"
                   className="absolute inset-0 w-full h-full object-cover z-10"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
