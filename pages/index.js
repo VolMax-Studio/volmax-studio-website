@@ -89,6 +89,21 @@ const translations = {
       cardAemoDesc: "16 units evaluated; dispatch conformance, generalization gap, and FCAS auditability finding.",
       p1Title: "Battery_Health_Portfolio",
       p1Desc: "NASA PCoE + Severson/Attia, DOI-archived. Honest findings led by their limits: where early prognosis breaks, where impedance is observable vs predictive, capacity-regeneration isolated from true fade. Includes the worked example where the audit caught its own pipeline overclaiming three times. Every number regenerates from reproduce.py.",
+      labCard: {
+        badge: "demonstrator",
+        title: "VolMax Battery Verification Lab",
+        desc: "Public technical demonstrator for evidence-based verification of battery and energy-storage systems.",
+        examplesLabel: "Three examples:",
+        examples: [
+          "Battery health analysis using Sandia laboratory data.",
+          "BESS field performance using PNNL/EPRI operational data.",
+          "Illustrative second-life battery screening with P10 evidence adjudication."
+        ],
+        summary: "Includes reproducible calculations, traceable evidence and explicitly bounded conclusions.",
+        liveLabel: "Live application",
+        sourceLabel: "Source code",
+        disclaimer: "Important: This is a research demonstrator, not a certification or completed commercial FAT/SAT engagement."
+      },
       reposTitle: "Other reproducible projects",
       p2Title: "Power_Signal_Tools",
       p2Desc: "Test-covered signal library (RMS, THD, DWT, Hilbert). The measurement layer the audits stand on.",
@@ -258,6 +273,21 @@ const translations = {
       cardAemoDesc: "Evaluacija 16 jedinica; odstupanje u dispatch-u, jaz u generalizaciji i FCAS mogućnost audita.",
       p1Title: "Battery_Health_Portfolio",
       p1Desc: "NASA PCoE + Severson/Attia, DOI-arhiviran. Pošteni nalazi vođeni svojim granicama: gde rana prognoza puca, gde je impedansa osmotriva a gde prediktivna, regeneracija kapaciteta izolovana od pravog opadanja. Sadrži worked example gde je audit uhvatio sopstveni pipeline tri puta. Svaki broj se regeneriše iz reproduce.py.",
+      labCard: {
+        badge: "demonstrator",
+        title: "VolMax Battery Verification Lab",
+        desc: "Javni tehnički demonstrator za verifikaciju baterijskih i BESS sistema zasnovanu na dokazima.",
+        examplesLabel: "Tri primera:",
+        examples: [
+          "Analiza stanja baterije koristeći Sandia laboratorijske podatke.",
+          "Terenske performanse BESS-a koristeći operativne PNNL/EPRI podatke.",
+          "Ilustrativni skrining baterija za drugu upotrebu uz P10 presuđivanje dokaza."
+        ],
+        summary: "Uključuje reproducibilne proračune, sledive dokaze i eksplicitno ograničene zaključke.",
+        liveLabel: "Aplikacija uživo",
+        sourceLabel: "Izvorni kod",
+        disclaimer: "Važno: Ovo je istraživački demonstrator, a ne sertifikacija ili završen komercijalni FAT/SAT angažman."
+      },
       reposTitle: "Ostali reproducibilni projekti",
       p2Title: "Power_Signal_Tools",
       p2Desc: "Test-pokrivena biblioteka za procesiranje signala (RMS, THD, DWT, Hilbert). Domenski sloj na kome leže auditi.",
@@ -635,6 +665,49 @@ export default function Home() {
               >
                 github.com/VolMax-Studio/Battery_Health_Portfolio
               </a>
+            </div>
+          </div>
+
+          {/* VolMax Battery Verification Lab Featured Card */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 mb-12 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-4 py-1.5 bg-slate-100 text-slate-600 border-b border-l border-slate-200 text-xs font-mono font-bold uppercase tracking-wider rounded-bl-2xl">
+              {t.evidence.labCard.badge}
+            </div>
+            <div className="max-w-3xl">
+              <h3 className="text-2xl md:text-3xl font-mono font-bold mb-4 text-slate-900">{t.evidence.labCard.title}</h3>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+                {t.evidence.labCard.desc}
+              </p>
+              <p className="text-slate-700 text-sm font-semibold mb-2">{t.evidence.labCard.examplesLabel}</p>
+              <ul className="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1 mb-4">
+                {t.evidence.labCard.examples.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                {t.evidence.labCard.summary}
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <a
+                  href="https://volmax-battery-verification-lab.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-teal-700 text-white rounded-xl hover:bg-teal-800 transition-all text-sm font-semibold"
+                >
+                  {t.evidence.labCard.liveLabel}
+                </a>
+                <a
+                  href="https://github.com/VolMax-Studio/volmax-battery-verification-lab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-50 border border-slate-200 text-slate-700 rounded-xl hover:bg-slate-100 transition-all text-sm font-semibold"
+                >
+                  {t.evidence.labCard.sourceLabel}
+                </a>
+              </div>
+              <p className="text-slate-500 text-xs font-mono leading-relaxed border-t border-slate-100 pt-4">
+                {t.evidence.labCard.disclaimer}
+              </p>
             </div>
           </div>
 
